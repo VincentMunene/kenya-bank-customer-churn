@@ -1,0 +1,11 @@
+CustomerID,Count,Country,County,City,Branch Code,Lat Long,Latitude,Longitude,Gender,Age Band,Marital Status,Dependents,Tenure Months,Primary Account,Debit Card,Mobile Banking,Internet Banking,SMS Alerts,Standing Orders,Loan Product,Savings Product,Insurance Product,Customer Segment,E-Statements,Preferred Transaction Channel,Monthly Transaction Value (KES),Total Relationship Value (KES)
+CBK-2019-0000001,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,0,55,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,42300,235100
+CBK-2019-0000002,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,35-44,Not stated,0,25,Savings,Yes,Yes,No,Yes,No,No,Yes,No,Retail,Yes,Mobile Banking,54100,116500
+CBK-2015-0000003,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,,Single,2,66,Salary,Yes,Yes,No,Yes,No,No,Yes,No,Retail,Yes,Agency Banking,10100,57600
+CBK-2018-0000004,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Separated/Widowed,0,94,Current,No,Yes,No,Yes,No,No,Yes,No,Youth,No,Card/POS,51200,486900
+CBK-2023-0000005,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,35-44,Separated/Widowed,2,47,Savings,Yes,Yes,Yes,No,Yes,Yes,Yes,No,SME,Yes,Mobile Banking,138100,1142000
+CBK-2022-0000006,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,35-44,Single,1,32,Current,Yes,Yes,No,Yes,No,Yes,No,No,SME,No,Mobile Banking,439600,1163900
+CBK-2016-0000007,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,0,50,Current,Yes,No,Yes,No,No,Yes,No,No,Youth,Yes,Card/POS,23100,559600
+CBK-2015-0000008,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,25-34,Not stated,1,58,Current,Yes,Yes,Yes,Yes,No,Yes,Yes,No,SME,Yes,Mobile Banking,526800,4784500
+CBK-2017-0000009,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Single,0,57,Savings,Yes,Yes,No,Yes,No,No,Yes,No,Youth,Yes,Branch,5300,32300
+CBK-2025-0000010,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,45-54,Single,1,76,Salary,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Retail,No,Mobile Banking,85500,1683900

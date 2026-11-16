@@ -1,0 +1,9 @@
+{
+  "model": "HistGB (tuned)",
+  "calibration": "sigmoid",
+  "calibration_comment": "Marginal improvement in training out-of-fold metrics.",
+  "high_risk_cutoff": 0.15893594989768972,
+  "medium_risk_cutoff": 0.06984619248253442,
+  "contact_score_cutoff": 0.15893594989768972,
+  "target_contact_fraction": 0.1
+}

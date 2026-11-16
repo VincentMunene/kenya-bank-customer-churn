@@ -1,0 +1,23 @@
+{
+  "customers": [
+    {
+      "customer_id": "CBK-2019-0000001",
+      "tenure_months": 55,
+      "monthly_transaction_value_kes": 42300,
+      "total_relationship_value_kes": 235100,
+      "debit_card": "Yes",
+      "mobile_banking": "No",
+      "internet_banking": "No",
+      "sms_alerts": "Yes",
+      "standing_orders": "No",
+      "loan_product": "No",
+      "savings_product": "Yes",
+      "insurance_product": "No",
+      "e_statements": "Yes",
+      "primary_account": "Savings",
+      "customer_segment": "Retail",
+      "preferred_transaction_channel": "ATM",
+      "county": "Nairobi"
+    }
+  ]
+}

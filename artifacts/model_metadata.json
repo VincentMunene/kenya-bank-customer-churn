@@ -1,0 +1,54 @@
+{
+  "model": "Histogram Gradient Boosting",
+  "calibration": "sigmoid",
+  "parameters": {
+    "class_weight": null,
+    "l2_regularization": 5.598816159985312,
+    "learning_rate": 0.010015601258913822,
+    "max_depth": 2,
+    "max_iter": 292,
+    "max_leaf_nodes": 6,
+    "min_samples_leaf": 122
+  },
+  "random_state": 42,
+  "input_columns": [
+    "debit_card",
+    "mobile_banking",
+    "internet_banking",
+    "sms_alerts",
+    "standing_orders",
+    "loan_product",
+    "savings_product",
+    "insurance_product",
+    "e_statements",
+    "tenure_months",
+    "monthly_transaction_value_kes",
+    "total_relationship_value_kes",
+    "primary_account",
+    "customer_segment",
+    "preferred_transaction_channel",
+    "county"
+  ],
+  "train_rows": 5634,
+  "test_rows": 1409,
+  "training_churn_rate": 0.0701100461483848,
+  "risk_band_cutoffs": {
+    "high_ge": 0.15893594989768972,
+    "medium_ge": 0.06984619248253442
+  },
+  "contact_capacity": 0.1,
+  "data_sha256": "0997817659bb55a5a6a1b56078ee1a860891e7406b224e6f155ffd058aaf068a",
+  "versions": {
+    "python": "3.10.11",
+    "scikit_learn": "1.7.2",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "joblib": "1.6.0"
+  },
+  "limitations": [
+    "Churn horizon and feature observation times are unverified.",
+    "Risk bands do not enforce a strict contact capacity.",
+    "Existing holdout has already been examined during analysis.",
+    "One row per customer is required."
+  ]
+}

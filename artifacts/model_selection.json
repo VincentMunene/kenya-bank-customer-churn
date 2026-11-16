@@ -1,0 +1,23 @@
+{
+  "selection_metric": "average_precision",
+  "selected_model": "HistGB (tuned)",
+  "logistic_regression": {
+    "best_cv_average_precision": 0.20483705179635772,
+    "best_parameters": {
+      "clf__C": 0.0017073967431528124,
+      "clf__class_weight": "balanced"
+    }
+  },
+  "histogram_gradient_boosting": {
+    "best_cv_average_precision": 0.22002766031242013,
+    "best_parameters": {
+      "clf__class_weight": null,
+      "clf__l2_regularization": 5.598816159985312,
+      "clf__learning_rate": 0.010015601258913822,
+      "clf__max_depth": 2,
+      "clf__max_iter": 292,
+      "clf__max_leaf_nodes": 6,
+      "clf__min_samples_leaf": 122
+    }
+  }
+}

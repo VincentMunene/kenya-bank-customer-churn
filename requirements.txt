@@ -1,0 +1,14 @@
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+scipy
+matplotlib
+seaborn
+joblib
+jupyterlab
+ipykernel
+fastapi
+uvicorn
+pydantic
+httpx
+pytest

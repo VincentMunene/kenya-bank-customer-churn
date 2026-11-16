@@ -1,0 +1,9 @@
+{
+  "class_weight": null,
+  "l2_regularization": 5.598816159985312,
+  "learning_rate": 0.010015601258913822,
+  "max_depth": 2,
+  "max_iter": 292,
+  "max_leaf_nodes": 6,
+  "min_samples_leaf": 122
+}

@@ -1,0 +1,4 @@
+Policy,Contacted,Contact fraction,Churners reached,Recall,Precision,Model-expected net benefit KES,Scenario net benefit using observed labels KES
+Contact nobody,0,0.0,0,0.0,,0.0,0.0
+Risk ranking — capacity limited,140,0.099361249112846,36,0.36363636363636365,0.2571428571428571,334258.0013800345,451968.75
+"Value ranking — positive benefit, capacity limited",140,0.099361249112846,19,0.1919191919191919,0.1357142857142857,1187372.9496751935,2920990.0

@@ -1,0 +1,15 @@
+{
+  "test_customers": 1409,
+  "test_churners": 99,
+  "test_churn_rate": 0.07026259758694109,
+  "roc_auc": 0.7639062379520395,
+  "average_precision": 0.2035575337989495,
+  "brier_score": 0.06038248034642598,
+  "contact_capacity": 0.1,
+  "customers_selected": 140,
+  "churners_reached": 36,
+  "precision_at_capacity": 0.2571428571428571,
+  "recall_at_capacity": 0.36363636363636365,
+  "lift_at_capacity": 3.6597402597402597,
+  "evaluation_note": "Reproduction check on the previously examined holdout; not a new independent validation."
+}

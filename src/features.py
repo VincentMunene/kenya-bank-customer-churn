@@ -134,3 +134,63 @@ def build_pipeline(estimator):
             ("model", estimator),
         ]
     )
+
+def build_simple_pipeline(estimator):
+    """Preprocess the original inputs and fit a classifier."""
+    from sklearn.preprocessing import StandardScaler
+
+    numeric_columns = [
+        "tenure_months",
+        "monthly_transaction_value_kes",
+        "total_relationship_value_kes",
+    ]
+
+    numeric_pipeline = Pipeline(
+        steps=[
+            ("impute", SimpleImputer(strategy="median")),
+            ("scale", StandardScaler()),
+        ]
+    )
+
+    categorical_pipeline = Pipeline(
+        steps=[
+            (
+                "impute",
+                SimpleImputer(
+                    strategy="constant",
+                    fill_value="Unknown",
+                ),
+            ),
+            (
+                "encode",
+                OneHotEncoder(
+                    handle_unknown="ignore",
+                    sparse_output=False,
+                ),
+            ),
+        ]
+    )
+
+    preprocessing = ColumnTransformer(
+        transformers=[
+            ("numeric", numeric_pipeline, numeric_columns),
+            (
+                "flags",
+                SimpleImputer(strategy="most_frequent"),
+                YES_NO_COLUMNS,
+            ),
+            (
+                "categorical",
+                categorical_pipeline,
+                CATEGORICAL_COLUMNS,
+            ),
+        ],
+        remainder="drop",
+    )
+
+    return Pipeline(
+        steps=[
+            ("preprocess", preprocessing),
+            ("model", estimator),
+        ]
+    )

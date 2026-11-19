@@ -1,4 +1,4 @@
-"""Evaluate the saved model on the recorded test partition."""
+"""Evaluate the saved classifier on the recorded test partition."""
 
 import hashlib
 import json
@@ -7,8 +7,11 @@ import numpy as np
 import pandas as pd
 
 from sklearn.metrics import (
-    average_precision_score,
-    brier_score_loss,
+    accuracy_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
     roc_auc_score,
 )
 
@@ -22,8 +25,9 @@ def main():
 
     model, metadata = load_artifacts(artifact_dir)
 
-    # Ensure evaluation uses the same dataset as training.
+    # Check that the dataset has not changed since training.
     checksum = hashlib.sha256(data_path.read_bytes()).hexdigest()
+
     if checksum != metadata["data_sha256"]:
         raise ValueError("Dataset differs from the training dataset.")
 
@@ -55,50 +59,49 @@ def main():
     if len(test) != metadata["test_rows"]:
         raise ValueError("Unexpected test partition size.")
 
+    X_test = test[metadata["input_columns"]]
     actual = test["churn"].to_numpy()
-    probabilities = model.predict_proba(
-        test[metadata["input_columns"]]
-    )[:, 1]
 
     if len(np.unique(actual)) != 2:
         raise ValueError("Test evaluation requires both target classes.")
 
-    # Strict capacity: never exceed 10% of the batch.
-    capacity = metadata["contact_capacity"]
-    contact_count = int(np.floor(capacity * len(test)))
+    predicted = model.predict(X_test)
+    probabilities = model.predict_proba(X_test)[:, 1]
 
-    if contact_count < 1:
-        raise ValueError("Test partition is too small for this capacity.")
-
-    ranked = np.argsort(-probabilities, kind="mergesort")
-
-    selected = np.zeros(len(test), dtype=bool)
-    selected[ranked[:contact_count]] = True
-
-    reached = int(actual[selected].sum())
-    precision = float(actual[selected].mean())
-    prevalence = float(actual.mean())
+    # Rows = actual class; columns = predicted class.
+    matrix = confusion_matrix(actual, predicted, labels=[0, 1])
+    tn, fp, fn, tp = matrix.ravel()
 
     metrics = {
+        "model": metadata["model"],
         "test_customers": len(test),
         "test_churners": int(actual.sum()),
-        "test_churn_rate": prevalence,
+        "test_churn_rate": float(actual.mean()),
+        "classification_rule": (
+            "model.predict: highest-probability class; "
+            "ties assigned to class 0."
+        ),
+        "accuracy": float(accuracy_score(actual, predicted)),
+        "precision": float(
+            precision_score(actual, predicted, zero_division=0)
+        ),
+        "recall": float(
+            recall_score(actual, predicted, zero_division=0)
+        ),
+        "f1": float(
+            f1_score(actual, predicted, zero_division=0)
+        ),
         "roc_auc": float(roc_auc_score(actual, probabilities)),
-        "average_precision": float(
-            average_precision_score(actual, probabilities)
-        ),
-        "brier_score": float(
-            brier_score_loss(actual, probabilities)
-        ),
-        "contact_capacity": capacity,
-        "customers_selected": contact_count,
-        "churners_reached": reached,
-        "precision_at_capacity": precision,
-        "recall_at_capacity": float(reached / actual.sum()),
-        "lift_at_capacity": float(precision / prevalence),
+        "confusion_matrix": {
+            "true_negatives": int(tn),
+            "false_positives": int(fp),
+            "false_negatives": int(fn),
+            "true_positives": int(tp),
+        },
         "evaluation_note": (
-            "Reproduction check on the previously examined holdout; "
-            "not a new independent validation."
+            "Evaluation on the previously examined holdout; "
+            "not a new independent validation. "
+            "Model selection used training cross-validation."
         ),
     }
 
@@ -108,26 +111,39 @@ def main():
         encoding="utf-8",
     )
 
+    predictions_path = artifact_dir / "script_test_predictions.csv"
+
     pd.DataFrame({
         "customer_id": test.index,
         "actual_churn": actual,
+        "predicted_churn": predicted,
         "p_churn": probabilities,
-        "selected_at_capacity": selected,
-    }).to_csv(
-        artifact_dir / "script_test_predictions.csv",
-        index=False,
+    }).to_csv(predictions_path, index=False)
+
+    confusion_table = pd.DataFrame(
+        matrix,
+        index=["Actual: No churn", "Actual: Churn"],
+        columns=["Predicted: No churn", "Predicted: Churn"],
     )
 
+    confusion_path = artifact_dir / "test_confusion_matrix.csv"
+    confusion_table.to_csv(confusion_path, index_label="actual_class")
+
+    print(f"Model: {metadata['model']}")
     print(f"Test customers: {len(test):,}")
-    print(f"Test churners: {actual.sum():,}")
+    print(f"Test churners: {int(actual.sum()):,}")
+    print(f"Accuracy: {metrics['accuracy']:.2%}")
+    print(f"Precision: {metrics['precision']:.2%}")
+    print(f"Recall: {metrics['recall']:.2%}")
+    print(f"F1 score: {metrics['f1']:.4f}")
     print(f"ROC-AUC: {metrics['roc_auc']:.4f}")
-    print(f"Average precision: {metrics['average_precision']:.4f}")
-    print(f"Brier score: {metrics['brier_score']:.4f}")
-    print(f"Customers selected: {contact_count}")
-    print(f"Churners reached: {reached}")
-    print(f"Recall at capacity: {metrics['recall_at_capacity']:.2%}")
-    print(f"Precision at capacity: {precision:.2%}")
-    print(f"Saved: {metrics_path}")
+
+    print("\nConfusion matrix:")
+    print(confusion_table.to_string())
+
+    print(f"\nSaved: {metrics_path}")
+    print(f"Saved: {predictions_path}")
+    print(f"Saved: {confusion_path}")
 
 
 if __name__ == "__main__":

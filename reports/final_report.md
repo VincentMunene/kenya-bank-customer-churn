@@ -6,202 +6,333 @@
 
 ## 1. Problem framing
 
-The project develops a reproducible system for ranking customers by
-estimated churn risk. Its operational demonstration prioritizes customers
-for retention review when contact capacity is limited.
+Customer churn can reduce a financial institution’s customer base and
+future revenue. Identifying customers who may leave can support retention
+review and help staff prioritize further investigation.
 
-The objective is prioritization rather than certainty about individual
-customers or proof that contacting them will prevent churn.
+This project develops an end-to-end customer churn classification system
+using illustrative banking data. It compares Logistic Regression and
+Random Forest, evaluates the selected model and serves predictions through
+a containerized API.
 
-The analysis notebook documents experimentation. Separate Python modules
-provide data processing, training, evaluation and inference.
+The system produces customer-level scores and descriptive risk bands.
+It does not establish whether contacting a customer will prevent churn.
+
+Data preparation, model comparison, training, evaluation and prediction
+are implemented in separate Python scripts. The submitted workflow does
+not require a notebook.
 
 ## 2. Dataset and scope
 
-The submitted dataset, CBCustomer_Churn.csv, contains 7,043 customers,
-including 494 churners: a positive-class prevalence of approximately 7.01%.
+The dataset, `CBCustomer_Churn.csv`, contains 7,043 customers, including
+494 churners and 6,549 non-churners. The churn prevalence is 7.01%.
 
-It includes account characteristics, service subscriptions, customer
-segments, tenure and monetary values expressed in KES.
+The target is `Churn Value`, where 1 represents churn and 0 represents
+no churn. Available fields include tenure, account characteristics,
+service subscriptions, customer segment, demographics and monetary
+values expressed in Kenyan shillings.
 
-The dataset is treated as synthetic/illustrative. Its precise generation
-process, observation dates and churn horizon are not independently
-verified. It is not presented as an extract of actual customer records
-from a named Kenyan bank.
+The dataset is treated as synthetic/illustrative academic data.
+Its precise generation process, observation dates and churn prediction
+horizon are not independently verified. It is not presented as actual
+customer records from a named Kenyan bank.
 
-Missing values were identified in geographic and demographic columns.
-Customer identifiers were unique. "Not applicable" churn reasons were
-normalized to missing values for analysis.
+Initial inspection identified missing values in geographic and demographic
+fields. Customer identifiers were unique. The small proportion of churners
+makes this an imbalanced classification problem.
 
-## 3. Leakage controls and preprocessing
+## 3. Input selection and preprocessing
+
+The selected model uses 16 raw inputs:
+
+- Tenure in months.
+- Monthly transaction value and total relationship value.
+- Nine service flags covering debit cards, mobile banking, internet
+  banking, SMS alerts, standing orders, loans, savings, insurance and
+  e-statements.
+- Primary account type, customer segment, preferred transaction channel
+  and county.
 
 Customer IDs are retained for traceability and partition checks but are
-not model predictors.
+excluded from model predictors.
 
-Churn Label and Churn Reason were excluded because they encode or describe
-the outcome. Churn Score and Customer Lifetime Value were excluded because
-their calculation timing and lineage were unverified.
+Churn Label and Churn Reason are excluded because they describe the
+outcome and could cause target leakage. Churn Score and Customer Lifetime
+Value are excluded because their calculation timing and data origins
+are unverified.
 
-The final model also excludes demographic fields and redundant geographic
-detail. County remains a predictor.
+Total Relationship Value remains an illustrative monetary input. Its
+underlying components and timing are not documented, which limits its
+business interpretation and requires verification before real-world use.
 
-The system uses an explicit allowlist of 16 raw model inputs. Shared
-cleaning validates IDs, service flags and numeric values.
+Age band and gender were investigated separately through training-only
+cross-validation. The findings and exclusion decision are reported
+in Section 6.
 
-Feature engineering creates logarithmic monetary features, tenure-related
-features, an activity ratio, service counts and channel-mismatch flags.
-These definitions are exploratory proxies, not verified financial
-measures. For example, the feature named n_products includes standing
-orders alongside loan, savings and insurance indicators.
+Shared cleaning checks required columns, unique customer IDs, valid
+Yes/No service flags and nonnegative, finite observed numeric values.
 
-Imputation and categorical encoding are fitted inside the model pipeline.
-The same fitted transformations are reused for inference.
+The preprocessing pipeline applies:
+
+- Median imputation and standard scaling to numeric inputs.
+- Most-frequent imputation to service flags.
+- Constant-value imputation and one-hot encoding to categorical inputs.
+
+Scaling supports Logistic Regression and is retained in the shared
+Random Forest pipeline. The selected model uses the original inputs
+without additional engineered ratios or service-count features.
+
+All learned preprocessing is fitted within each cross-validation training
+fold. The final fitted transformations are saved with the classifier
+and reused during prediction.
 
 ## 4. Experimental design and model selection
 
-A stratified split allocated 5,634 customers to training and 1,409 to
-testing. The test partition contains 99 churners.
+A stratified split with random seed 42 allocated 5,634 customers to
+training and 1,409 to testing. The test partition contains 99 churners.
 
-Training cross-validation compared:
+Five-fold stratified cross-validation on the training partition compared:
 
-- A dummy prevalence baseline.
-- Logistic regression with and without class weighting.
-- Random Forest.
-- Histogram Gradient Boosting.
+1. A dummy classifier that always predicts the majority class.
+2. Logistic Regression without class weighting.
+3. Logistic Regression with balanced class weights.
+4. Random Forest without class weighting.
+5. Random Forest with balanced class weights.
 
-Average precision was the primary selection metric because churn is rare.
-ROC-AUC, Brier score and contact-capacity metrics provided complementary
-views. Average precision is labelled PR-AUC in some notebook tables;
-it is not identical to trapezoidal area under the precision–recall curve.
+Logistic Regression provides a simple linear comparison. Random Forest
+can capture nonlinear relationships and interactions between inputs.
+Balanced class weights give churn cases more influence during training
+without generating additional customer records.
 
-Randomized search tuned logistic regression and boosting using training
-data. Tuned Histogram Gradient Boosting had the highest mean average
-precision in the finalist comparison.
+F1 was established as the primary selection metric because it balances
+precision and recall for the churn class. Accuracy, precision, recall
+and ROC-AUC were also reported.
 
-Sigmoid calibration produced only marginal improvements in training
-out-of-fold metrics and was retained. Matching overall prevalence alone
-was not treated as proof of calibration.
+Mean cross-validation results were:
 
-Cross-validation estimates remain subject to model-selection optimism.
-The test partition was examined during analysis; subsequent scripted
-evaluation is a reproduction check, not a new independent validation.
+| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
+|---|---:|---:|---:|---:|---:|
+| Dummy baseline | 0.9299 | 0.0000 | 0.0000 | 0.0000 | 0.5000 |
+| Logistic Regression | 0.9299 | 0.0000 | 0.0000 | 0.0000 | 0.6856 |
+| Logistic Regression, balanced | 0.6555 | 0.1200 | 0.6177 | 0.2009 | 0.6774 |
+| Random Forest | 0.9299 | 0.0000 | 0.0000 | 0.0000 | 0.7339 |
+| Random Forest, balanced | 0.8568 | 0.1987 | 0.3443 | 0.2519 | 0.7195 |
 
-## 5. Results
+Balanced Random Forest achieved the highest mean F1 and was selected.
+Balanced Logistic Regression achieved higher recall but lower precision.
 
-The standalone evaluation script checks the dataset checksum and evaluates
-the saved model using the recorded test partition.
+The unweighted classifiers achieved approximately 93% accuracy while
+identifying no churners at their default classification threshold.
+Their ROC-AUC scores indicate some ranking ability despite this
+classification behavior.
+
+The selected Random Forest uses 200 trees, maximum depth 8, minimum
+samples per leaf 5, balanced class weights and random seed 42.
+No probability calibration is applied.
+
+These settings were used in a limited comparison rather than an exhaustive
+hyperparameter search. More complex algorithms were not retained in the
+final workflow to keep the implementation understandable and defensible
+within the project scope.
+
+## 5. Evaluation metrics
+
+The evaluation uses five metrics:
+
+- **Accuracy:** proportion of all customers classified correctly.
+- **Precision:** proportion of predicted churners who actually churned.
+- **Recall:** proportion of actual churners identified.
+- **F1:** harmonic mean of churn precision and recall.
+- **ROC-AUC:** ability to rank churners above non-churners across thresholds.
+
+Accuracy alone is insufficient because most customers do not churn.
+Precision reflects false-alarm burden, while recall reflects missed
+churners. F1 summarizes their trade-off without assigning an explicit
+financial cost to either error.
+
+Accuracy, precision, recall and F1 use the model’s default class
+predictions. ROC-AUC uses probability scores. No classification threshold
+was selected using the test results.
+
+## 6. Age and gender experiment
+
+A separate experiment compared the baseline Random Forest with versions
+including age band, gender, or both. All versions used the same training
+customers, model parameters and five validation folds.
+
+Age band and gender were encoded as categorical variables. Missing age
+values were handled within the preprocessing pipeline.
+
+| Inputs added | Mean F1 | F1 fold SD | Recall | ROC-AUC |
+|---|---:|---:|---:|---:|
+| None: baseline | 0.2519 | 0.0344 | 0.3443 | 0.7195 |
+| Age band | 0.2580 | 0.0317 | 0.3392 | 0.7140 |
+| Gender | 0.2496 | 0.0456 | 0.3342 | 0.7162 |
+| Age band and gender | 0.2589 | 0.0363 | 0.3316 | 0.7202 |
+
+Including both fields increased mean F1 by 0.0069 and improved F1 in
+four of five folds. However, recall decreased, and ROC-AUC changed only
+slightly.
+
+The original 16 inputs were retained as a simplicity trade-off given
+the small observed improvement. This does not mean the baseline had the
+highest F1 across demographic variants. The fold variation is descriptive;
+no formal statistical significance claim is made.
+
+The experiment did not score the test partition or replace the deployed
+model. Excluding age and gender does not guarantee fairness, and this
+feature comparison is not a subgroup fairness audit.
+
+## 7. Test results and interpretation
+
+The evaluation script verifies the dataset checksum and evaluates the
+saved model on the recorded test partition.
 
 | Metric | Result |
 |---|---:|
 | Test customers | 1,409 |
 | Test churners | 99 |
-| ROC-AUC | 0.7639 |
-| Average precision | 0.2036 |
-| Brier score | 0.0604 |
-| Customers selected under strict 10% capacity | 140 |
-| Churners reached | 36 |
-| Recall at capacity | 36.36% |
-| Precision at capacity | 25.71% |
+| Accuracy | 86.59% |
+| Precision | 25.54% |
+| Recall | 47.47% |
+| F1 score | 0.3322 |
+| ROC-AUC | 0.7609 |
 
-The model ranks customers meaningfully above the prevalence baseline,
-but many selected customers do not churn and most churners remain outside
-the contact list.
+The confusion matrix is:
 
-The notebook's rounded-up top-decile calculation selects 141 customers;
-the strict-capacity script selects 140. Their results should not be
-presented as interchangeable.
+| Actual class | Predicted no churn | Predicted churn |
+|---|---:|---:|
+| No churn | 1,173 | 137 |
+| Churn | 52 | 47 |
 
-## 6. Interpretation and subgroup review
+The model correctly identified 47 of 99 churners and missed 52.
+Of the 184 customers predicted to churn, 137 did not churn.
+Approximately one in four flagged customers was an actual churner.
 
-Permutation importance identified tenure as the strongest contributor
-to test-set ranking, followed by savings products and mobile banking.
+Predicting no churn for everyone would achieve approximately 92.97%
+test accuracy but zero churn recall. The selected model has lower overall
+accuracy while identifying a meaningful portion of churners.
 
-These are predictive associations, not evidence that changing a service
-subscription causes a change in churn.
+Performance remains modest. The model could support an illustrative
+review process, but the false positives and missed churners limit its
+usefulness for operational decisions.
 
-Subgroup analysis included missing demographic values as a separate group.
-Observed recall differed across genders and age groups. Youth customers
-had higher average predicted risk than their observed churn rate, while
-Corporate and SME customers showed the opposite pattern.
+These classification results are not a fixed-capacity contact policy.
+They do not estimate retention effectiveness or financial savings.
 
-Small subgroup churn counts limit conclusions. Excluding demographic
-predictors does not guarantee fairness, and no subgroup-specific thresholds
-were chosen from these test results.
-
-## 7. Retention-policy scenario
-
-Two policies were compared under the same maximum capacity of 140 contacts:
-
-| Policy | Churners reached | Recall | Precision |
-|---|---:|---:|---:|
-| Risk ranking | 36 | 36.4% | 25.7% |
-| Value ranking | 19 | 19.2% | 13.6% |
-
-Value ranking produced higher hypothetical financial benefits under
-assumed contact costs, save rates and recoverable customer value.
-These figures are not realized savings.
-
-Risk ranking is the primary operational demonstration. Value-based
-targeting would require verified pre-decision customer values and
-experimental evidence of intervention effectiveness.
+The test partition was examined during earlier project development.
+These results are therefore not a new independent validation.
+Model and demographic comparisons used training cross-validation,
+but repeated development still limits the strength of generalization
+claims.
 
 ## 8. System implementation
 
-The operational system consists of:
+The system consists of reusable Python modules for preparation,
+preprocessing, model comparison, training, evaluation and prediction.
 
-- Reusable preparation and feature-engineering modules.
-- A standalone training script using exported selected parameters.
-- A serialized calibrated pipeline and model metadata.
-- A standalone evaluation script.
-- Batch prediction.
-- A FastAPI service with health and prediction endpoints.
-- Docker and Docker Compose configuration.
+The training script saves the fitted pipeline as
+`artifacts/churn_model.joblib`. Metadata records the model configuration,
+dataset checksum, input columns and library versions. A split manifest
+records training and test customer IDs.
 
-The API loads the saved model at startup. It does not retrain per request
-or require the notebook.
+Batch prediction and the FastAPI service use the same scoring function.
+The API provides health and prediction endpoints and loads the saved
+model at startup.
 
-Input schemas reject missing required fields, negative values and
-unexpected fields. Shared cleaning rejects duplicate customer IDs.
+Input validation rejects missing required fields, unexpected fields,
+negative values and duplicate customer IDs.
 
-Risk bands describe training-derived score ranges. The API returns scores
-and bands; it does not enforce campaign capacity or initiate outreach.
+Predictions contain:
+
+- Customer ID.
+- An uncalibrated model probability score named `p_churn`.
+- A descriptive Low, Medium or High risk band.
+
+Risk-band cutoffs are the 70th and 90th percentiles of training
+out-of-fold scores. They are separate from the default classification
+rule used for test evaluation and do not enforce contact capacity.
+
+Because class weighting is used without calibration, the scores should
+not be presented as verified absolute churn probabilities.
+
+Docker packages the application, model and metadata. The serving
+container does not require the training dataset or retrain per request.
 
 ## 9. Verification and reproducibility
 
 Development checks confirmed:
 
-- Successful training and model reload.
-- Standalone evaluation matching notebook results to displayed precision.
-- Working batch predictions.
-- Agreement between API and shared batch scoring.
+- Successful Random Forest training and model reload.
+- Evaluation using the recorded test partition.
+- Successful batch prediction.
+- Agreement between API and batch scoring.
 - Seven passing API integration tests.
-- Successful Docker image build and prediction through the container.
+- Successful Docker image build and a healthy container.
+- Agreement between container predictions and local batch predictions.
 
-The repository records selected hyperparameters, dataset checksum,
-library versions and split assignments.
+The API tests cover health, prediction consistency, negative tenure,
+missing fields, unexpected outcome fields, empty batches and duplicate
+customer IDs.
 
-The listed runtime packages are pinned, but the Docker base-image tag
-and transitive dependencies are not fully immutable. Bit-for-bit
-reproducibility across platforms is therefore not claimed.
+The workflow is run from the repository root:
+
+    python -m src.prepare_data
+    python -m src.compare_models
+    python -m src.train
+    python -m src.evaluate
+
+The demographic comparison can be reproduced separately:
+
+    python -m src.compare_demographics
+
+A fresh-clone reproduction check remains to be completed.
+Development dependency versions are recorded, but the Docker base-image
+tag and transitive runtime dependencies are not fully immutable.
+Bit-for-bit reproducibility across platforms is not claimed.
 
 ## 10. Limitations and next steps
 
-The main limitations are synthetic/illustrative data, unverified feature
-timing and churn horizon, random rather than temporal validation, few
-positive labels, and uncertain intervention effectiveness.
+The main limitations are:
 
-Before real-world use:
+- Synthetic/illustrative data with an unverified generation process.
+- Unverified feature timing, monetary-field definitions and churn horizon.
+- Random rather than future-period validation.
+- A relatively small number of churn examples.
+- Previously examined test data and possible model-selection optimism.
+- Modest precision and recall.
+- Uncalibrated probability scores.
+- No current-model subgroup fairness assessment.
+- No evidence that acting on predictions prevents churn.
 
-1. Establish a clear churn event and prediction horizon.
-2. Obtain verified pre-outcome features and temporal customer snapshots.
-3. Evaluate on a genuinely new future-period dataset.
-4. Reassess calibration and subgroup errors.
-5. Measure retention effectiveness through a randomized pilot.
-6. Add production authentication, monitoring and operational controls.
+Before real-world deployment, the institution would need to define churn
+and its prediction horizon, verify feature availability before the
+outcome, and validate on genuinely new customer data.
 
-The project demonstrates an end-to-end ML implementation, not a
-production-approved banking decision system.
+Further work should assess probability calibration, subgroup errors and
+decision thresholds using training or validation data. Retention benefits
+would require a controlled intervention study.
 
-## 11. AI assistance
+Production deployment would also require authentication, access controls,
+monitoring and operational support.
 
-See AI_USE.md for disclosure of AI assistance and verification performed.
+## 11. Conclusion
+
+The project demonstrates a scripted machine-learning workflow from data
+validation to containerized prediction.
+
+Balanced Random Forest was selected from the main model comparison using
+training cross-validation F1. On the recorded test partition, it achieved
+86.59% accuracy, 25.54% precision, 47.47% recall, an F1 score of 0.3322 and
+ROC-AUC of 0.7609.
+
+The implementation demonstrates the required pipeline and deployment
+capabilities. Its predictive results and data limitations do not establish
+readiness for production banking decisions.
+
+## 12. AI assistance
+
+AI assistance supported code drafting, debugging, evaluation explanations
+and documentation.
+
+See `AI_USE.md` for the detailed disclosure of assistance and verification.

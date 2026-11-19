@@ -2,18 +2,16 @@
 
 ## Tool used
 
-ChatGPT and Claude, assisted with this project.
+Copilot, ChatGPT and Claude.
 
 ## Scope of assistance
 
 AI assistance included:
 
+- Copilot was used for generation synthetic data since it is embeded in the FI system.
 - Planning the project structure and development workflow.
-- Explaining preprocessing, leakage, evaluation and calibration.
-- Drafting Python modules for data preparation, feature engineering,
-  training, evaluation and prediction.
 - Drafting the FastAPI service, request schemas and integration tests.
-- Drafting Docker configuration and troubleshooting setup errors.
+- Drafting Docker configuration and troubleshooting errors.
 
 ## Verification performed
 

@@ -1,25 +1,22 @@
-"""Train the selected churn model and save its prediction pipeline."""
+"""Train the selected Random Forest and save its prediction pipeline."""
 
 import hashlib
 import json
 import platform
-from pathlib import Path
 
 import joblib
 import numpy as np
 import pandas as pd
 import sklearn
 
-from sklearn.calibration import CalibratedClassifierCV
-from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import (
-    StratifiedGroupKFold,
     StratifiedKFold,
     cross_val_predict,
     train_test_split,
 )
 
-from src.features import build_pipeline
+from src.features import build_simple_pipeline
 from src.prepare_data import PROJECT_ROOT, MODEL_INPUTS, clean_data
 
 
@@ -31,22 +28,8 @@ def main():
     ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
 
     data_path = PROJECT_ROOT / "data/raw/CBCustomer_Churn.csv"
-    parameter_path = ARTIFACT_DIR / "selected_hgb_params.json"
+    data = clean_data(pd.read_csv(data_path), require_target=True)
 
-    if not parameter_path.is_file():
-        raise FileNotFoundError(
-            "Export selected_hgb_params.json from the notebook first."
-        )
-
-    parameters = json.loads(parameter_path.read_text(encoding="utf-8"))
-
-    # Reuse the shared cleaner directly from the original CSV.
-    data = clean_data(
-        pd.read_csv(data_path),
-        require_target=True,
-    )
-
-    # Reproduce the notebook's split.
     train, test = train_test_split(
         data,
         test_size=0.20,
@@ -61,31 +44,24 @@ def main():
 
     X_train = train[MODEL_INPUTS]
     y_train = train["churn"].to_numpy()
-    groups = train["customer_id"].to_numpy()
 
-    classifier = HistGradientBoostingClassifier(
-        random_state=SEED,
-        **parameters,
+    parameters = {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "min_samples_leaf": 5,
+        "class_weight": "balanced",
+        "random_state": SEED,
+        "n_jobs": 1,
+    }
+
+    model = build_simple_pipeline(
+        RandomForestClassifier(**parameters)
     )
 
-    pipeline = build_pipeline(classifier)
+    # Training-only scores for the existing descriptive risk bands.
+    print("Generating training out-of-fold scores...", flush=True)
 
-    # Each calibration fold fits its own complete preprocessing pipeline.
-    model = CalibratedClassifierCV(
-        estimator=pipeline,
-        method="sigmoid",
-        cv=StratifiedKFold(
-            n_splits=5,
-            shuffle=True,
-            random_state=SEED,
-        ),
-        ensemble=True,
-    )
-
-    # Training-only predictions for descriptive risk-band cutoffs.
-    print("Generating training out-of-fold predictions...", flush=True)
-
-    outer_cv = StratifiedGroupKFold(
+    cv = StratifiedKFold(
         n_splits=5,
         shuffle=True,
         random_state=SEED,
@@ -95,33 +71,41 @@ def main():
         model,
         X_train,
         y_train,
-        groups=groups,
-        cv=outer_cv,
+        cv=cv,
         method="predict_proba",
         n_jobs=1,
     )[:, 1]
 
-    high_cut = float(np.quantile(oof_scores, 0.90))
-    medium_cut = float(np.quantile(oof_scores, 0.70))
-
-    print("Fitting the final calibrated model...", flush=True)
+    print("Fitting the selected Random Forest...", flush=True)
     model.fit(X_train, y_train)
 
     model_path = ARTIFACT_DIR / "churn_model.joblib"
     joblib.dump(model, model_path)
 
+    # Check serialization using training rows only.
+    reloaded = joblib.load(model_path)
+    sample = X_train.head(10)
+
+    np.testing.assert_allclose(
+        model.predict_proba(sample),
+        reloaded.predict_proba(sample),
+    )
+
     metadata = {
-        "model": "Histogram Gradient Boosting",
-        "calibration": "sigmoid",
+        "model": "Random Forest",
+        "calibration": "none",
         "parameters": parameters,
+        "selection_metric": "mean cross-validation F1",
+        "selection_results": "simple_model_cv_results.csv",
         "random_state": SEED,
         "input_columns": MODEL_INPUTS,
         "train_rows": len(train),
         "test_rows": len(test),
         "training_churn_rate": float(y_train.mean()),
+        "classification_threshold": 0.5,
         "risk_band_cutoffs": {
-            "high_ge": high_cut,
-            "medium_ge": medium_cut,
+            "high_ge": float(np.quantile(oof_scores, 0.90)),
+            "medium_ge": float(np.quantile(oof_scores, 0.70)),
         },
         "contact_capacity": 0.10,
         "data_sha256": hashlib.sha256(
@@ -135,9 +119,12 @@ def main():
             "joblib": joblib.__version__,
         },
         "limitations": [
+            "The dataset is synthetic or illustrative.",
             "Churn horizon and feature observation times are unverified.",
-            "Risk bands do not enforce a strict contact capacity.",
             "Existing holdout has already been examined during analysis.",
+            "Class-weighted scores are not calibrated churn probabilities.",
+            "Risk bands are descriptive and differ from predicted classes.",
+            "Risk bands do not enforce a strict contact capacity.",
             "One row per customer is required.",
         ],
     }
@@ -168,15 +155,6 @@ def main():
     }).to_csv(
         ARTIFACT_DIR / "training_oof_scores.csv",
         index=False,
-    )
-
-    # Verify serialization without evaluating the test partition.
-    reloaded = joblib.load(model_path)
-    sample = X_train.head(10)
-
-    np.testing.assert_allclose(
-        model.predict_proba(sample),
-        reloaded.predict_proba(sample),
     )
 
     print(f"Training customers: {len(train):,}")

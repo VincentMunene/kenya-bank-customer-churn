@@ -1,15 +1,16 @@
 {
-  "model": "Histogram Gradient Boosting",
-  "calibration": "sigmoid",
+  "model": "Random Forest",
+  "calibration": "none",
   "parameters": {
-    "class_weight": null,
-    "l2_regularization": 5.598816159985312,
-    "learning_rate": 0.010015601258913822,
-    "max_depth": 2,
-    "max_iter": 292,
-    "max_leaf_nodes": 6,
-    "min_samples_leaf": 122
+    "n_estimators": 200,
+    "max_depth": 8,
+    "min_samples_leaf": 5,
+    "class_weight": "balanced",
+    "random_state": 42,
+    "n_jobs": 1
   },
+  "selection_metric": "mean cross-validation F1",
+  "selection_results": "simple_model_cv_results.csv",
   "random_state": 42,
   "input_columns": [
     "debit_card",
@@ -32,9 +33,10 @@
   "train_rows": 5634,
   "test_rows": 1409,
   "training_churn_rate": 0.0701100461483848,
+  "classification_threshold": 0.5,
   "risk_band_cutoffs": {
-    "high_ge": 0.15893594989768972,
-    "medium_ge": 0.06984619248253442
+    "high_ge": 0.5220221783816801,
+    "medium_ge": 0.38048833834910273
   },
   "contact_capacity": 0.1,
   "data_sha256": "0997817659bb55a5a6a1b56078ee1a860891e7406b224e6f155ffd058aaf068a",
@@ -46,9 +48,12 @@
     "joblib": "1.6.0"
   },
   "limitations": [
+    "The dataset is synthetic or illustrative.",
     "Churn horizon and feature observation times are unverified.",
-    "Risk bands do not enforce a strict contact capacity.",
     "Existing holdout has already been examined during analysis.",
+    "Class-weighted scores are not calibrated churn probabilities.",
+    "Risk bands are descriptive and differ from predicted classes.",
+    "Risk bands do not enforce a strict contact capacity.",
     "One row per customer is required."
   ]
 }

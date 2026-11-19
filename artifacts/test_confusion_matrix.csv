@@ -1,0 +1,3 @@
+actual_class,Predicted: No churn,Predicted: Churn
+Actual: No churn,1173,137
+Actual: Churn,52,47

@@ -1,68 +1,111 @@
 # Kenya Bank Customer Churn Prediction
 
-An academic machine-learning project demonstrating customer churn
-analysis, reproducible training, batch prediction and a containerized
-FastAPI service.
+An academic machine-learning project for predicting customer churn in a
+Kenyan financial institution context.
 
-The notebook is for analysis. Training and serving run independently
-through Python modules.
+The project includes scripted data preparation, model comparison,
+training, evaluation, batch prediction and a Dockerized FastAPI service.
+No notebook is required to run the submitted system.
 
-## Problem and data
+## Problem and dataset
 
-The project ranks customers by estimated churn risk to support retention
-review under limited contact capacity.
+The objective is to identify customers who may churn and support
+retention review.
 
-- Dataset: `data/raw/CBCustomer_Churn.csv`
-- Customers: 7,043
-- Churned customers: 494 (7.01%)
-- Target: `Churn Value`
-- Monetary values: KES
+| Item | Description |
+|---|---|
+| Dataset | `data/raw/CBCustomer_Churn.csv` |
+| Customers | 7,043 |
+| Churners | 494 |
+| Churn rate | 7.01% |
+| Target | `Churn Value`: 1 = churn, 0 = no churn |
+| Monetary values | Kenyan shillings (KES) |
 
-The dataset is used as a synthetic/illustrative academic dataset.
-It is not evidence of actual customer behavior at a named bank.
-
-Identifiers and outcome-related fields are excluded from model inputs.
-These include Churn Label, Churn Reason, Churn Score and Customer
-Lifetime Value. Demographic fields are excluded from the final model
-and retained in the notebook for subgroup analysis.
+The dataset is treated as synthetic data derived from real world attributes given the sensitivity. It is
+not presented as actual customer records from a bank.
 
 ## Architecture
 
 ```mermaid
 flowchart TD
-    A["Customer CSV"] --> B["Shared data validation and cleaning"]
+    A["Customer CSV"] --> B["Validation and cleaning"]
     B --> C["Training partition"]
-    C --> D["Feature pipeline and calibrated model"]
-    D --> E["Saved model and metadata"]
-    B --> F["Recorded test partition"]
-    E --> G["Evaluation"]
-    F --> G
-    H["API request or batch CSV"] --> I["Shared scoring function"]
-    E --> I
-    I --> J["Churn probability and risk band"]
+    B --> D["Recorded test partition"]
+    C --> E["Cross-validation comparison"]
+    C --> F["Train selected Random Forest"]
+    F --> G["Saved pipeline and metadata"]
+    G --> H["Test evaluation"]
+    D --> H
+    G --> I["Shared prediction function"]
+    J["Batch CSV or API request"] --> I
+    I --> K["Customer ID, churn score and risk band"]
 ```
 
 ## Project structure
 
 | Path | Purpose |
 |---|---|
-| `notebooks/` | Exploratory analysis and model experiments |
 | `src/prepare_data.py` | Validate and clean customer data |
-| `src/features.py` | Feature engineering and preprocessing |
-| `src/train.py` | Train and serialize the selected model |
-| `src/evaluate.py` | Evaluate using the recorded test partition |
-| `src/predict.py` | Batch scoring and shared inference functions |
+| `src/features.py` | Shared preprocessing and feature functions |
+| `src/compare_models.py` | Compare classifiers using training cross-validation |
+| `src/train.py` | Train and serialize the selected Random Forest |
+| `src/evaluate.py` | Evaluate the recorded test partition |
+| `src/predict.py` | Batch prediction and shared scoring |
 | `api/main.py` | FastAPI application |
 | `api/schemas.py` | Request and response validation |
-| `artifacts/` | Model, configuration, metrics and split records |
+| `data/raw/` | Source dataset |
+| `data/processed/` | Generated cleaned dataset |
+| `artifacts/` | Saved model, metadata and evaluation outputs |
 | `examples/` | Example CSV and JSON inputs |
 | `tests/test_api.py` | API integration tests |
-| `Dockerfile` | Serving image |
+| `reports/final_report.md` | Project report |
+| `requirements-lock.txt` | Recorded development dependencies |
+| `requirements-runtime.txt` | Serving dependencies |
+| `Dockerfile` | Container image definition |
 | `docker-compose.yml` | Local container configuration |
+| `AI_USE.md` | AI assistance disclosure |
+
+## Model inputs and preprocessing
+
+The model uses 16 raw inputs:
+
+- Tenure in months.
+- Monthly transaction value and total relationship value.
+- Nine service flags: debit card, mobile banking, internet banking,
+  SMS alerts, standing orders, loan product, savings product,
+  insurance product and e-statements.
+- Primary account, customer segment, preferred transaction channel
+  and county.
+
+Customer identifiers are retained for traceability but excluded from
+model predictors.
+
+Churn Label and Churn Reason are excluded because they describe the
+outcome and could cause target leakage. Churn Score and Customer Lifetime
+Value are excluded because their calculation timing and data origins
+are unverified.
+
+Age band and gender were assessed through training-only cross-validation.
+Including both increased mean F1 slightly, from 0.2519 to 0.2589, while
+recall decreased from 34.43% to 33.16%. They were excluded from the final
+model to retain a simpler input contract given the small improvement.
+Their exclusion does not guarantee fairness.
+
+The selected model uses the original inputs with:
+
+- Median imputation and standard scaling for numeric columns.
+- Most-frequent imputation for service flags.
+- Constant-value imputation and one-hot encoding for categorical columns.
+
+
+All preprocessing is fitted inside each cross-validation
+training fold. The final fitted pipeline is reused for prediction.
 
 ## Local setup
 
-Use Python 3.10, matching the model-training environment.
+Use Python 3.10, matching the training environment.
+
+Run the following in Windows PowerShell:
 
 ```powershell
 git clone https://github.com/VincentMunene/kenya-bank-customer-churn.git
@@ -80,65 +123,131 @@ python -m pip check
 `requirements-runtime.txt` pins the listed serving packages for Docker;
 it is not a complete transitive dependency lock.
 
-Only load trusted joblib artifacts.
+Only load trusted joblib model files.
 
-## Reproduce data processing, training and evaluation
+## Reproduce the workflow
 
-Run commands from the repository root:
+Run all commands from the repository root:
 
 ```powershell
 python -m src.prepare_data
+python -m src.compare_models
 python -m src.train
 python -m src.evaluate
 ```
 
-Training reads the committed configuration:
+The preparation script writes the cleaned dataset. The comparison and
+training scripts read the raw CSV through the same shared cleaning
+function.
 
-```text
-artifacts/selected_hgb_params.json
-```
+A stratified split with random seed 42 assigns:
 
-This configuration came from notebook hyperparameter search.
-The training script reproduces the selected approach without rerunning
-the search or requiring an active notebook.
+- 5,634 customers to training.
+- 1,409 customers to testing.
 
-Training uses 5,634 customers. The recorded test partition contains
-1,409 customers, including 99 churners. Preprocessing is fitted within
-the training and calibration folds.
+Model comparison uses five-fold stratified cross-validation on the
+training partition. The test partition is excluded from model selection.
 
-The dataset checksum and library versions are recorded in:
+The training script contains the selected Random Forest parameters
+explicitly. It does not require an exported boosting configuration.
 
-```text
-artifacts/model_metadata.json
-```
+Training saves the model, metadata, split assignments and training
+out-of-fold scores. Evaluation checks the dataset checksum and uses the
+recorded test partition.
 
-Evaluation verifies the dataset checksum and uses:
+## Model comparison
 
-```text
-artifacts/split_manifest.csv
-```
+The comparison includes a dummy baseline and two algorithms, each
+with and without class weighting.
 
-## Model and results
+Mean training cross-validation results:
 
-Selected approach: Histogram Gradient Boosting with sigmoid calibration.
+| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
+|---|---:|---:|---:|---:|---:|
+| Dummy baseline | 0.9299 | 0.0000 | 0.0000 | 0.0000 | 0.5000 |
+| Logistic Regression | 0.9299 | 0.0000 | 0.0000 | 0.0000 | 0.6856 |
+| Logistic Regression, balanced | 0.6555 | 0.1200 | 0.6177 | 0.2009 | 0.6774 |
+| Random Forest | 0.9299 | 0.0000 | 0.0000 | 0.0000 | 0.7339 |
+| Random Forest, balanced | 0.8568 | 0.1987 | 0.3443 | 0.2519 | 0.7195 |
 
-Results from the standalone evaluation script:
+Balanced Random Forest was selected because it achieved the highest mean
+validation F1. F1 balances precision and recall for the churn class.
+
+The unweighted models achieved high accuracy but identified no churners
+at their default classification threshold. This demonstrates why
+accuracy alone is insufficient for this imbalanced dataset.
+
+Cross-validation results, including fold standard deviations, are saved
+in `artifacts/simple_model_cv_results.csv`.
+
+## Selected model
+
+The selected Random Forest uses:
+
+| Parameter | Value |
+|---|---|
+| Number of trees | 200 |
+| Maximum depth | 8 |
+| Minimum samples per leaf | 5 |
+| Class weighting | Balanced |
+| Random seed | 42 |
+| Probability calibration | None |
+
+Logistic Regression provides a simple linear comparison. Random Forest
+can capture nonlinear relationships and interactions. Class weighting
+gives the minority churn class more influence during training.
+
+## Test evaluation
+
+Results on the recorded test partition:
 
 | Metric | Result |
 |---|---:|
-| ROC-AUC | 0.7639 |
-| Average precision | 0.2036 |
-| Brier score | 0.0604 |
-| Maximum contacts under strict 10% capacity | 140 |
-| Churners reached | 36 of 99 |
-| Recall at capacity | 36.36% |
-| Precision at capacity | 25.71% |
+| Accuracy | 86.59% |
+| Precision | 25.54% |
+| Recall | 47.47% |
+| F1 score | 0.3322 |
+| ROC-AUC | 0.7609 |
 
-The notebook's rounded-up top-decile metric uses 141 customers;
-the script's strict capacity rule uses 140.
+Confusion matrix:
 
-This evaluation reproduces results on a previously examined holdout.
-It is not a new independent validation.
+| Actual class | Predicted no churn | Predicted churn |
+|---|---:|---:|
+| No churn | 1,173 | 137 |
+| Churn | 52 | 47 |
+
+The model correctly identified 47 of 99 churners, missed 52 churners
+and incorrectly flagged 137 non-churners.
+
+Predicting no churn for every test customer would achieve approximately
+92.97% accuracy but zero churn recall.
+
+Metric interpretation:
+
+- **Accuracy:** proportion of all customers classified correctly.
+- **Precision:** proportion of predicted churners who actually churned.
+- **Recall:** proportion of actual churners identified.
+- **F1:** harmonic mean of churn precision and recall.
+- **ROC-AUC:** ability to rank churners above non-churners across thresholds.
+
+Accuracy, precision, recall and F1 use `model.predict()`. The model chooses
+the highest-probability class, assigning ties to class 0. ROC-AUC uses
+probability scores.
+
+These results use the default classification rule, not a top-10%
+contact-capacity policy.
+
+The test partition was examined during earlier project development.
+These results are therefore not a new independent validation.
+
+Evaluation writes:
+
+- `artifacts/script_test_metrics.json`
+- `artifacts/script_test_predictions.csv`
+- `artifacts/test_confusion_matrix.csv`
+
+These files describe the current model. Older experimental artifacts,
+if present, should not be interpreted as its results.
 
 ## Batch prediction
 
@@ -148,12 +257,18 @@ python -m src.predict --input examples/customers.csv --output artifacts/example_
 
 Output columns:
 
-- `customer_id`
-- `p_churn`
-- `risk_band`
+| Column | Meaning |
+|---|---|
+| `customer_id` | Customer identifier |
+| `p_churn` | Uncalibrated model probability score |
+| `risk_band` | Low, Medium or High based on training-derived cutoffs |
 
-Risk bands use training-derived score cutoffs. They do not enforce a
-fixed contact capacity.
+The model uses class weighting. Its scores should not be interpreted
+as verified absolute probabilities of churn.
+
+Risk bands use the 70th and 90th percentiles of training out-of-fold
+scores. They are descriptive categories, separate from the classification
+rule used for evaluation, and do not enforce a fixed contact capacity.
 
 ## Run the API locally
 
@@ -161,15 +276,55 @@ fixed contact capacity.
 python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
 ```
 
+Endpoints:
+
 - Health: http://127.0.0.1:8000/health
 - Interactive documentation: http://127.0.0.1:8000/docs
 - Predictions: `POST /predict`
 
-The API loads the model at startup and does not retrain per request.
+The API loads the saved model at startup and does not retrain per request.
+
+Use `examples/request.json` as the request template:
+
+```powershell
+$response = Invoke-RestMethod `
+    -Uri "http://127.0.0.1:8000/predict" `
+    -Method Post `
+    -ContentType "application/json" `
+    -Body (Get-Content .\examples\request.json -Raw)
+
+$response | ConvertTo-Json -Depth 5
+```
+
+Verified example response:
+
+```json
+{
+  "predictions": [
+    {
+      "customer_id": "CBK-2019-0000001",
+      "p_churn": 0.4191376229720125,
+      "risk_band": "Medium"
+    }
+  ]
+}
+```
+
+## API input validation
+
+- Supply 1–1,000 customers per request.
+- Customer IDs must be present and unique within the request.
+- Service flags must use `"Yes"` or `"No"`.
+- Tenure must be a nonnegative integer.
+- Monetary values must be finite and nonnegative.
+- Required fields must be supplied.
+- Unexpected fields, including outcome fields, are rejected.
+
+Invalid requests return HTTP 422.
 
 ## Run with Docker
 
-Docker Desktop must be running with Linux containers.
+Start Docker Desktop and ensure the Linux engine is running.
 
 Stop any local API server using port 8000, then run:
 
@@ -178,65 +333,76 @@ docker compose up --build -d
 docker compose ps
 ```
 
-Check health and submit the example request:
+Check health:
 
 ```powershell
 Invoke-RestMethod -Uri "http://127.0.0.1:8000/health"
-
-$response = Invoke-RestMethod `
-    -Uri "http://127.0.0.1:8000/predict" `
-    -Method Post `
-    -ContentType "application/json" `
-    -Body (Get-Content examples/request.json -Raw)
-
-$response | ConvertTo-Json -Depth 5
 ```
 
-Inspect logs or stop the container:
+The health response should identify Random Forest with calibration
+set to `none`. Submit the example prediction request using the same
+PowerShell command shown above.
+
+Inspect logs:
 
 ```powershell
 docker compose logs --tail 50 churn-api
+```
+
+Stop the container:
+
+```powershell
 docker compose down
 ```
 
-The serving image includes the saved model and application code.
-It does not require the dataset or notebook.
+The image includes the application code, saved model and metadata.
+The training dataset is not required for serving predictions.
 
-## API input contract
+After retraining or changing application code, rebuild the image:
 
-Use `examples/request.json` as the request template.
+```powershell
+docker compose up --build -d
+```
 
-- Supply 1–1,000 customers per request.
-- Customer IDs must be present and unique within the request.
-- Service flags use `"Yes"` or `"No"`.
-- Tenure must be a nonnegative integer.
-- Monetary values must be finite and nonnegative.
-- Missing required fields and unexpected fields are rejected.
-- Outcome fields must not be supplied.
+## Tests and verification
 
-Invalid requests return HTTP 422.
-
-## Tests
+Run the API integration tests:
 
 ```powershell
 python -m pytest tests/test_api.py -q
 ```
 
-Seven integration tests cover health, prediction consistency, negative
-tenure, missing fields, outcome-field rejection, empty batches and
-duplicate customer IDs.
+Seven tests cover:
 
-The tests passed in the development environment. A TestClient dependency
-deprecation warning was observed; it did not prevent execution.
+- Health endpoint.
+- Agreement between API and batch predictions.
+- Negative tenure rejection.
+- Missing required field rejection.
+- Outcome-field rejection.
+- Empty batch rejection.
+- Duplicate customer ID rejection.
+
+All seven tests passed with the Random Forest model. A TestClient
+dependency deprecation warning was observed but did not fail the tests.
+
+Training, model reload, batch prediction, Docker image build and
+prediction through the container were also verified in the development
+environment.
+
+A fresh-clone reproduction check remains to be completed. Dependency
+versions are recorded, but bit-for-bit reproducibility across platforms
+is not claimed.
 
 ## Limitations
 
-- Synthetic/illustrative data does not establish production performance.
-- Observation dates and the churn prediction horizon are unverified.
-- Random splitting does not demonstrate future-period generalization.
-- Small positive-class and subgroup samples create uncertainty.
-- Calibration does not guarantee accurate probabilities in a new population.
-- Churn risk is not the same as responsiveness to a retention intervention.
-- Notebook financial scenarios use assumed costs and intervention effects;
-  they are not realized savings.
-- The API is a local academic demonstration, not a production bank service.
+- Synthetic data does not establish performance on real
+  Kenyan bank customers.
+- Predicting churn does not establish whether a retention intervention
+  will prevent it.
+- The API is a local academic demonstration and requires additional
+  security, monitoring and validation before production use.
+
+## Report and AI disclosure
+
+- [Final report](reports/final_report.md)
+- [AI assistance disclosure](AI_USE.md)

@@ -1,5 +1,7 @@
 # Kenya Bank Customer Churn Prediction
 
+[![Churn API CI](https://github.com/VincentMunene/kenya-bank-customer-churn/actions/workflows/ci.yml/badge.svg)](https://github.com/VincentMunene/kenya-bank-customer-churn/actions/workflows/ci.yml)
+
 An academic machine-learning project for predicting customer churn in a
 Kenyan financial institution context.
 
@@ -392,6 +394,17 @@ environment.
 A fresh-clone reproduction check remains to be completed. Dependency
 versions are recorded, but bit-for-bit reproducibility across platforms
 is not claimed.
+
+## Continuous integration
+
+GitHub Actions runs automatically on pushes and pull requests to main.
+The workflow installs dependencies, runs API integration tests, builds
+the Docker image and checks container health and prediction consistency.
+
+These checks verify the committed model and serving application in a
+fresh Linux runner. They do not retrain the model or deploy a public API.
+
+Workflow: `.github/workflows/ci.yml`.
 
 ## Limitations
 

@@ -1,0 +1,501 @@
+CustomerID,Count,Country,County,City,Branch Code,Lat Long,Latitude,Longitude,Gender,Age Band,Marital Status,Dependents,Tenure Months,Primary Account,Debit Card,Mobile Banking,Internet Banking,SMS Alerts,Standing Orders,Loan Product,Savings Product,Insurance Product,Customer Segment,E-Statements,Preferred Transaction Channel,Monthly Transaction Value (KES),Total Relationship Value (KES)
+CBK-2024-0000369,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,45-54,Single,3,10,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,7100.0,27200
+CBK-2026-0005880,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Married,3,25,Salary,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,31180.0,524500
+CBK-2022-0000654,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,,Male,35-44,Single,1,5,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,20700.0,32900
+CBK-2014-0005845,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,35-44,Married,0,71,Student,Yes,No,No,Yes,Yes,No,Yes,Yes,Retail,No,ATM,6620.0,189900
+CBK-2015-0006515,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,35-44,Married,0,15,Salary,Yes,No,No,No,No,No,Yes,Yes,Retail,Yes,ATM,8940.0,56200
+CBK-2022-0005876,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,Married,3,24,Savings,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,20700.0,791400
+CBK-2017-0006393,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,45-54,Married,2,94,Salary,No,No,No,Yes,Yes,No,No,No,Retail,No,ATM,9140.0,515900
+CBK-2014-0007006,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,,Male,25-34,Married,0,40,Savings,Yes,No,No,No,No,No,Yes,No,Retail,Yes,ATM,8440.0,186100
+CBK-2022-0006218,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Male,25-34,Married,3,6,Savings,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,7540.0,31800
+CBK-2023-0005582,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,3,77,Salary,Yes,No,No,Yes,No,Yes,Yes,No,SME,Yes,ATM,41840.0,2774700
+CBK-2023-0002010,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,35-44,Single,3,29,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,8140.0,125700
+CBK-2024-0000929,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,25-34,Married,2,15,Current,Yes,No,No,Yes,Yes,No,Yes,Yes,Retail,No,ATM,32960.0,186300
+CBK-2014-0006846,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,0,74,Savings,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,29160.0,1254100
+CBK-2015-0000171,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,35-44,Married,0,2,Salary,Yes,No,No,Yes,Yes,No,Yes,No,Corporate,No,ATM,159360.0,96100
+CBK-2026-0004509,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,,Female,45-54,Single,0,4,Savings,No,No,No,Yes,No,No,Yes,No,SME,Yes,ATM,35000.0,81300
+CBK-2023-0006849,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,35-44,Married,1,39,Savings,No,No,No,Yes,Yes,Yes,No,No,SME,Yes,ATM,15900.0,1070800
+CBK-2015-0006231,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,,Married,3,16,Current,No,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,12720.0,1046900
+CBK-2023-0005579,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Single,0,18,Savings,Yes,No,No,Yes,No,No,Yes,No,SME,No,ATM,7640.0,60500
+CBK-2014-0000575,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,,Male,65+,Married,1,63,Savings,Yes,No,No,Yes,No,No,Yes,Yes,SME,No,ATM,44000.0,1832200
+CBK-2017-0002634,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,45-54,Single,0,57,Savings,Yes,No,No,Yes,Yes,No,Yes,No,SME,No,ATM,66980.0,2776500
+CBK-2021-0004571,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Married,2,38,Business,Yes,No,No,No,Yes,No,Yes,Yes,Retail,No,ATM,7680.0,212000
+CBK-2022-0005351,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,35-44,Married,1,65,Savings,Yes,No,No,Yes,Yes,Yes,No,No,SME,No,ATM,50160.0,1786800
+CBK-2015-0005731,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,25-34,Married,2,12,Current,Yes,No,No,Yes,No,No,Yes,Yes,Retail,Yes,ATM,10500.0,88900
+CBK-2017-0003441,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,35-44,,0,96,Salary,Yes,No,No,Yes,No,Yes,Yes,Yes,Retail,No,ATM,37940.0,2694400
+CBK-2023-0004977,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,4,47,Current,Yes,No,No,Yes,Yes,No,Yes,No,SME,Yes,ATM,208720.0,6759600
+CBK-2017-0005099,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",,36.9476,Male,25-34,Single,2,21,Current,No,No,No,Yes,No,No,No,No,Retail,Yes,ATM,13000.0,169700
+CBK-2016-0005105,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Not stated,1,9,Salary,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,1400.0,683100
+CBK-2015-0000030,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,2,10,Savings,Yes,No,No,Yes,No,Yes,No,No,Corporate,No,ATM,657840.0,5584000
+CBK-2021-0004553,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,0,40,Salary,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,27000.0,1882500
+CBK-2019-0005022,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,35-44,Single,0,69,Student,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,8160.0,395200
+CBK-2015-0005960,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,25-34,Separated/Widowed,0,3,Savings,Yes,No,No,Yes,No,Yes,No,No,Retail,No,ATM,12120.0,1052800
+CBK-2021-0004674,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Single,2,36,Savings,Yes,No,No,Yes,Yes,No,No,No,SME,Yes,ATM,78220.0,2111200
+CBK-2014-0003486,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Married,0,22,Business,Yes,No,No,Yes,No,Yes,No,No,SME,No,ATM,50380.0,831800
+CBK-2014-0006051,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,25-34,Single,2,69,Current,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,2600.0,79100
+CBK-2023-0004799,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,25-34,Married,0,109,Student,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,10600.0,340800
+CBK-2024-0003932,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,1,46,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,26160.0,639700
+CBK-2018-0004300,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,35-44,Married,3,102,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,11620.0,453300
+CBK-2026-0005925,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Single,3,13,Business,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,5240.0,98000
+CBK-2022-0006027,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,55-64,Single,0,28,Salary,Yes,No,No,Yes,No,No,No,No,Youth,No,ATM,540.0,6700
+CBK-2019-0002963,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,,Male,25-34,Married,0,30,Savings,Yes,No,No,Yes,No,Yes,No,No,Retail,No,ATM,32040.0,1291300
+CBK-2021-0000308,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,35-44,Separated/Widowed,0,33,Savings,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,4120.0,56900
+CBK-2025-0005905,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,25-34,Married,2,23,Current,Yes,No,No,Yes,Yes,No,Yes,Yes,Corporate,No,ATM,380100.0,2846800
+CBK-2023-0005587,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,1,40,Current,Yes,No,No,Yes,No,Yes,No,No,SME,No,ATM,51740.0,1379100
+CBK-2021-0004269,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",,36.08,Female,45-54,Single,1,73,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,19140.0,584500
+CBK-2014-0002071,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,,Single,4,25,Salary,Yes,No,No,Yes,No,No,Yes,No,Sacco,Yes,ATM,67460.0,517600
+CBK-2020-0006226,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,35-44,,1,83,Student,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,16720.0,714500
+CBK-2016-0006830,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Female,35-44,Married,2,42,Salary,Yes,No,No,Yes,No,No,No,No,Sacco,No,ATM,292420.0,6974000
+CBK-2016-0003818,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,35-44,Separated/Widowed,4,56,Savings,Yes,No,No,Yes,No,No,Yes,Yes,Retail,Yes,ATM,5000.0,209600
+CBK-2015-0006482,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,35-44,Single,0,26,Salary,Yes,No,No,Yes,No,No,Yes,Yes,Retail,No,ATM,9960.0,149900
+CBK-2020-0003022,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Other/Not stated,25-34,Married,3,23,Salary,No,No,No,Yes,No,No,No,Yes,Retail,Yes,ATM,7740.0,115700
+CBK-2023-0003114,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,2,51,Salary,Yes,No,No,Yes,No,No,No,No,Youth,Yes,ATM,1000.0,20200
+CBK-2022-0003774,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,,Female,35-44,Single,0,7,Savings,Yes,No,No,No,No,Yes,No,No,Retail,No,ATM,8080.0,545000
+CBK-2024-0001194,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,45-54,Married,1,80,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,10400.0,553800
+CBK-2023-0003051,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,45-54,Single,1,5,Salary,No,No,No,No,No,Yes,Yes,Yes,Corporate,No,ATM,705920.0,1734700
+CBK-2026-0003621,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,65+,Single,0,51,Salary,Yes,No,No,Yes,Yes,No,Yes,No,SME,Yes,ATM,134820.0,3719600
+CBK-2014-0000518,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Married,0,33,Savings,Yes,No,No,Yes,No,Yes,Yes,No,SME,Yes,ATM,94100.0,1759000
+CBK-2019-0001821,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,55-64,Separated/Widowed,4,20,Savings,Yes,No,No,Yes,No,Yes,Yes,Yes,Retail,No,ATM,10620.0,999900
+CBK-2021-0003239,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,18-24,Married,0,44,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,5740.0,108100
+CBK-2014-0002007,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",,36.9476,Male,35-44,Married,0,32,Savings,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,26020.0,266900
+CBK-2019-0006820,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",,37.4574,Female,25-34,Single,0,34,Business,Yes,No,No,Yes,Yes,No,Yes,No,Youth,No,ATM,3460.0,51700
+CBK-2021-0003405,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,1,12,Current,Yes,No,No,Yes,Yes,No,Yes,No,SME,Yes,ATM,136160.0,1088500
+CBK-2016-0002346,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,25-34,Single,1,17,Student,Yes,No,No,No,Yes,No,Yes,No,Retail,No,ATM,4240.0,31700
+CBK-2019-0006282,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Single,1,46,Savings,Yes,No,No,No,No,Yes,No,No,Retail,No,ATM,13740.0,1514700
+CBK-2019-0006992,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,18-24,Single,1,39,Student,Yes,No,No,Yes,No,No,No,Yes,Corporate,No,ATM,301280.0,6396200
+CBK-2017-0002662,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Single,1,42,Current,Yes,No,No,Yes,Yes,No,No,No,Corporate,Yes,ATM,718520.0,10683700
+CBK-2023-0002124,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,65+,Married,1,24,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,9900.0,75900
+CBK-2018-0001877,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,,Female,45-54,Married,1,33,Current,Yes,No,No,Yes,No,No,No,Yes,Retail,Yes,ATM,35020.0,340500
+CBK-2020-0000123,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,55-64,Married,2,24,Business,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,1380.0,20000
+CBK-2024-0004103,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Single,0,68,Savings,Yes,No,No,No,No,No,Yes,No,Youth,No,ATM,1700.0,48800
+CBK-2014-0003057,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Separated/Widowed,2,77,Student,Yes,No,No,Yes,No,Yes,No,No,Retail,No,ATM,2560.0,844300
+CBK-2022-0003398,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,25-34,Married,2,20,Student,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,3040.0,27400
+CBK-2018-0003435,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Other/Not stated,35-44,Married,1,61,Savings,Yes,No,No,Yes,No,Yes,Yes,No,SME,No,ATM,73760.0,4177500
+CBK-2015-0005871,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Single,2,49,Current,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,1280.0,19800
+CBK-2019-0005563,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,45-54,Single,3,34,Salary,Yes,No,No,Yes,Yes,Yes,No,Yes,SME,No,ATM,58460.0,1911400
+CBK-2021-0004082,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,65+,Married,0,77,Savings,Yes,No,No,Yes,Yes,No,Yes,No,SME,No,ATM,262580.0,8033200
+CBK-2017-0003011,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,,Female,35-44,Single,0,22,Savings,No,No,No,No,Yes,No,Yes,No,Sacco,No,ATM,137840.0,1841500
+CBK-2016-0001125,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,55-64,Single,0,30,Business,Yes,No,No,Yes,No,No,Yes,No,SME,No,ATM,626780.0,8389400
+CBK-2025-0002390,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,35-44,Single,1,10,Business,No,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,9800.0,70500
+CBK-2021-0006392,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,Married,1,114,Savings,No,No,No,Yes,No,No,Yes,No,Youth,No,ATM,1220.0,80000
+CBK-2014-0004556,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Female,35-44,Separated/Widowed,4,74,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,10900.0,515500
+CBK-2026-0001111,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Male,65+,Married,1,40,Savings,Yes,No,No,Yes,Yes,No,Yes,Yes,Retail,Yes,ATM,26440.0,415800
+CBK-2024-0003412,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,2,19,Salary,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,5960.0,1075400
+CBK-2024-0000381,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",,34.7519,Male,45-54,Single,1,77,Student,Yes,No,No,Yes,No,Yes,No,Yes,SME,Yes,ATM,90640.0,6032000
+CBK-2023-0007010,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Separated/Widowed,2,27,Business,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,5260.0,1134400
+CBK-2021-0001898,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Married,0,49,Savings,Yes,No,No,Yes,No,No,Yes,No,SME,Yes,ATM,47880.0,1118100
+CBK-2026-0005363,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,35-44,Separated/Widowed,2,12,Current,No,No,No,Yes,No,No,Yes,Yes,Retail,Yes,ATM,15660.0,90400
+CBK-2016-0000432,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Married,0,35,Savings,Yes,No,No,Yes,No,Yes,No,No,SME,Yes,ATM,11940.0,384200
+CBK-2017-0002784,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,65+,Married,1,52,Savings,Yes,No,No,Yes,No,Yes,Yes,Yes,Retail,No,ATM,10780.0,634900
+CBK-2021-0006497,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,35-44,Married,3,91,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,8220.0,273100
+CBK-2020-0006148,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,1,81,Current,Yes,No,No,Yes,No,No,No,Yes,Youth,Yes,ATM,2160.0,59500
+CBK-2023-0000025,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,45-54,Married,0,32,Salary,Yes,No,No,Yes,No,No,Yes,No,Sacco,Yes,ATM,828280.0,10478900
+CBK-2019-0005561,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,18-24,Married,2,57,Business,Yes,No,No,Yes,No,Yes,No,No,SME,Yes,ATM,35900.0,1762700
+CBK-2014-0000105,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,65+,Married,2,56,Current,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,16500.0,508500
+CBK-2025-0000269,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,0,34,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,4160.0,77700
+CBK-2021-0002912,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Single,4,75,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,9800.0,528800
+CBK-2025-0003577,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Separated/Widowed,0,42,Current,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,19460.0,248100
+CBK-2014-0000588,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,,Male,45-54,Married,1,112,Current,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,1520.0,49900
+CBK-2025-0006082,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,35-44,Married,2,111,Salary,Yes,No,No,Yes,No,No,Yes,No,SME,Yes,ATM,57960.0,3089200
+CBK-2022-0006041,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,35-44,Married,1,23,Current,No,No,No,No,No,No,Yes,No,Retail,No,ATM,6520.0,44700
+CBK-2026-0006721,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Single,1,114,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Corporate,Yes,ATM,1739520.0,85230100
+CBK-2020-0003155,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,35-44,Married,0,47,Business,No,No,No,Yes,No,No,Yes,No,Retail,No,ATM,7800.0,230300
+CBK-2019-0001667,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",,36.8172,Female,55-64,Married,3,27,Business,Yes,No,No,Yes,No,Yes,Yes,Yes,Retail,No,ATM,6340.0,438900
+CBK-2017-0003037,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,1,113,Current,Yes,No,No,Yes,Yes,Yes,No,No,Corporate,No,ATM,1361640.0,68578700
+CBK-2014-0004506,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Male,45-54,Single,1,24,Current,Yes,No,No,Yes,No,Yes,Yes,No,SME,Yes,ATM,7220.0,509900
+CBK-2014-0003144,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,18-24,Single,0,36,Current,No,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,6300.0,140800
+CBK-2023-0006479,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,35-44,Single,0,65,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,5660.0,270100
+CBK-2014-0001119,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,,Married,0,27,Business,Yes,No,No,Yes,No,Yes,No,No,Retail,No,ATM,12380.0,674100
+CBK-2023-0006284,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,25-34,Single,0,48,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,3760.0,116400
+CBK-2022-0003744,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Male,18-24,Single,3,29,Savings,Yes,No,No,Yes,No,Yes,Yes,No,SME,No,ATM,13360.0,1392700
+CBK-2019-0002225,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Other/Not stated,25-34,Single,1,31,Business,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,2040.0,1214100
+CBK-2026-0000408,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,35-44,Married,3,66,Salary,Yes,No,No,Yes,No,No,No,No,Sacco,No,ATM,219180.0,10078700
+CBK-2015-0002991,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,,Single,1,35,Business,No,No,No,Yes,Yes,No,No,Yes,Retail,No,ATM,6320.0,85800
+CBK-2015-0005449,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,18-24,Married,0,51,Savings,Yes,No,No,No,Yes,Yes,Yes,No,Retail,No,ATM,15800.0,1099900
+CBK-2020-0006323,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,65+,Separated/Widowed,3,124,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,31940.0,2800400
+CBK-2026-0001628,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,25-34,Single,1,28,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,Retail,Yes,ATM,8540.0,1227000
+CBK-2018-0006644,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,35-44,Married,3,43,Savings,Yes,No,No,Yes,No,Yes,Yes,Yes,SME,No,ATM,60600.0,2115500
+CBK-2015-0002219,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,45-54,Single,1,88,Salary,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,Yes,ATM,46520.0,3464500
+CBK-2022-0004334,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Female,55-64,Single,2,34,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,4020.0,93500
+CBK-2025-0003109,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,45-54,Married,3,110,Current,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,960.0,46300
+CBK-2014-0006160,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Separated/Widowed,2,4,Business,Yes,No,No,Yes,No,Yes,No,Yes,Retail,No,ATM,6640.0,1148600
+CBK-2016-0000043,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,55-64,Married,1,50,Salary,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,2640.0,51000
+CBK-2025-0005318,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,,Male,35-44,Single,2,14,Savings,Yes,No,No,Yes,Yes,No,Yes,No,Retail,No,ATM,23520.0,196400
+CBK-2020-0001296,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,35-44,Single,2,17,Savings,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,4480.0,54700
+CBK-2021-0003960,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,25-34,Married,0,9,Salary,Yes,No,No,Yes,Yes,Yes,No,No,Retail,Yes,ATM,8540.0,1106200
+CBK-2021-0004978,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,1,193,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,27940.0,1910300
+CBK-2014-0004606,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,45-54,Not stated,4,14,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,34260.0,255100
+CBK-2019-0003977,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,18-24,Single,1,13,Student,Yes,No,No,Yes,Yes,No,Yes,No,Retail,No,ATM,8540.0,38800
+CBK-2021-0003869,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,25-34,Married,2,79,Salary,No,No,No,Yes,No,No,No,No,Retail,No,ATM,10660.0,382600
+CBK-2018-0002486,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,25-34,Married,1,63,Current,Yes,No,No,No,No,No,No,No,SME,No,ATM,90860.0,3752200
+CBK-2020-0003261,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,1,21,Student,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,3960.0,216800
+CBK-2019-0002017,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,35-44,Married,1,56,Business,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,40200.0,1102200
+CBK-2014-0006076,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,45-54,Separated/Widowed,0,33,Savings,Yes,No,No,Yes,Yes,No,Yes,No,SME,Yes,ATM,209080.0,4891100
+CBK-2019-0000106,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Male,35-44,Not stated,2,53,Savings,Yes,No,No,Yes,No,No,No,No,SME,Yes,ATM,63540.0,2257200
+CBK-2016-0002532,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,4,16,Current,Yes,No,No,Yes,Yes,No,Yes,Yes,SME,Yes,ATM,28640.0,171900
+CBK-2024-0003509,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,35-44,Single,1,74,Salary,No,No,No,Yes,No,No,Yes,No,Retail,No,ATM,6260.0,297500
+CBK-2025-0004767,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,25-34,Single,0,87,Business,Yes,No,No,Yes,Yes,Yes,No,Yes,Retail,Yes,ATM,7680.0,740300
+CBK-2018-0003785,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,25-34,Single,2,72,Current,Yes,No,No,Yes,No,No,Yes,Yes,SME,No,ATM,67680.0,1456500
+CBK-2021-0004059,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Married,3,65,Savings,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,460.0,16100
+CBK-2022-0006014,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,3,78,Business,Yes,No,No,No,No,No,Yes,No,Retail,Yes,ATM,14400.0,455300
+CBK-2023-0000565,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,2,55,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,3840.0,138900
+CBK-2021-0003883,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,25-34,,0,31,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,17460.0,383400
+CBK-2018-0007001,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,,Single,1,57,Savings,Yes,No,No,No,No,No,Yes,Yes,Retail,Yes,ATM,4740.0,119500
+CBK-2015-0006853,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,35-44,Separated/Widowed,1,11,Business,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,6700.0,262300
+CBK-2025-0004369,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,55-64,Single,1,128,Student,Yes,No,No,Yes,No,No,Yes,Yes,Sacco,No,ATM,84720.0,7010100
+CBK-2018-0001116,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,25-34,Single,2,38,Salary,Yes,No,No,Yes,Yes,No,Yes,No,Youth,No,ATM,13240.0,286600
+CBK-2019-0002738,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,,3,70,Savings,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,6640.0,803800
+CBK-2019-0002953,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,1,28,Savings,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,17020.0,179700
+CBK-2016-0006435,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,25-34,Single,0,85,Salary,No,No,No,Yes,No,No,Yes,No,Retail,No,ATM,3940.0,145900
+CBK-2015-0000668,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,35-44,Single,1,9,Salary,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,No,ATM,13440.0,728200
+CBK-2023-0004219,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,35-44,Married,0,44,Savings,Yes,No,No,Yes,No,Yes,No,No,Corporate,No,ATM,1384180.0,36534400
+CBK-2020-0004289,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,3,80,Salary,No,No,No,Yes,No,Yes,No,Yes,Retail,No,ATM,4020.0,353100
+CBK-2018-0003686,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,,Female,45-54,Married,2,65,Salary,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,1980.0,85500
+CBK-2016-0002665,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Single,3,13,Business,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,7980.0,926900
+CBK-2020-0003387,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,55-64,Married,2,111,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,6240.0,448000
+CBK-2023-0003232,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,35-44,Single,2,50,Business,Yes,No,No,Yes,No,No,No,No,SME,Yes,ATM,40080.0,732800
+CBK-2024-0003318,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,45-54,Married,0,19,Current,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,14060.0,417300
+CBK-2015-0005194,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,65+,Married,0,32,Current,Yes,No,No,No,No,Yes,Yes,No,Retail,No,ATM,2280.0,196600
+CBK-2016-0006811,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Separated/Widowed,2,35,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,14900.0,181500
+CBK-2014-0000581,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,55-64,Single,0,35,Salary,Yes,No,No,Yes,No,No,Yes,Yes,Sacco,Yes,ATM,123840.0,2811100
+CBK-2018-0006483,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,0,58,Salary,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,17580.0,483000
+CBK-2026-0002259,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,,Female,18-24,Single,2,36,Salary,Yes,No,No,Yes,No,Yes,No,No,Retail,No,ATM,10000.0,1004300
+CBK-2023-0001311,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Married,0,46,Savings,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,15460.0,972100
+CBK-2016-0005057,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,45-54,Separated/Widowed,2,42,Student,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,9480.0,118800
+CBK-2023-0006283,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,18-24,Single,0,25,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,Retail,No,ATM,8940.0,846000
+CBK-2016-0006675,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,65+,Single,1,109,Salary,Yes,No,No,Yes,Yes,No,Yes,No,Youth,No,ATM,4340.0,284400
+CBK-2020-0003755,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,55-64,Married,3,25,Student,No,No,No,No,Yes,Yes,Yes,Yes,SME,No,ATM,133500.0,2929800
+CBK-2016-0004851,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,,Married,2,21,Salary,No,No,No,Yes,No,No,No,No,Retail,Yes,ATM,5820.0,43400
+CBK-2020-0001066,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,,0,24,Current,Yes,No,No,Yes,No,No,Yes,Yes,Retail,No,ATM,4280.0,38700
+CBK-2017-0003522,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,35-44,Married,1,35,Savings,No,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,4480.0,80000
+CBK-2025-0002838,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,18-24,Married,1,90,Current,No,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,2800.0,919200
+CBK-2023-0006869,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,35-44,Single,1,63,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,10700.0,375900
+CBK-2022-0006677,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Married,1,56,Current,Yes,No,No,Yes,No,No,Yes,Yes,SME,Yes,ATM,294200.0,5891400
+CBK-2026-0001732,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,35-44,,2,16,Savings,No,No,No,Yes,Yes,No,No,No,Retail,Yes,ATM,5380.0,60900
+CBK-2021-0005657,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,45-54,Married,1,155,Salary,Yes,No,No,No,No,Yes,Yes,No,Retail,No,ATM,7480.0,884500
+CBK-2015-0003640,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Married,3,40,Savings,Yes,No,No,No,No,No,Yes,No,Youth,Yes,ATM,2920.0,65600
+CBK-2019-0003208,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,25-34,Single,0,5,Savings,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,3800.0,10600
+CBK-2020-0005222,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,18-24,Married,2,52,Business,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,9740.0,1260900
+CBK-2023-0001428,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,55-64,Married,1,75,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,7480.0,179400
+CBK-2015-0004459,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,25-34,Married,3,23,Salary,Yes,No,No,Yes,No,No,No,No,SME,No,ATM,44800.0,682000
+CBK-2026-0005065,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,35-44,Single,0,114,Salary,Yes,No,No,Yes,No,No,Yes,Yes,Retail,Yes,ATM,2300.0,101000
+CBK-2019-0006341,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,55-64,Married,1,30,Salary,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,2200.0,38900
+CBK-2017-0006880,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,35-44,Single,0,56,Salary,Yes,No,No,Yes,Yes,Yes,No,No,Retail,No,ATM,9440.0,296200
+CBK-2026-0003174,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,,Female,25-34,Married,1,121,Savings,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,39080.0,3004700
+CBK-2022-0000945,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Separated/Widowed,3,118,Student,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,42760.0,3193500
+CBK-2018-0000202,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,Single,2,32,Savings,Yes,No,No,Yes,Yes,Yes,No,Yes,Retail,No,ATM,14480.0,433500
+CBK-2022-0005899,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,18-24,Single,3,55,Savings,Yes,No,No,Yes,Yes,Yes,Yes,Yes,SME,Yes,ATM,14580.0,994600
+CBK-2024-0005777,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,45-54,Married,3,43,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,13880.0,1159700
+CBK-2014-0000321,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,25-34,Separated/Widowed,2,116,Savings,No,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,16240.0,1210000
+CBK-2022-0005018,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,18-24,Married,0,14,Savings,Yes,No,No,No,No,No,Yes,No,Retail,No,ATM,8860.0,65600
+CBK-2022-0006334,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,55-64,Not stated,1,139,Business,Yes,No,No,Yes,No,Yes,No,No,Retail,No,ATM,2780.0,1218900
+CBK-2014-0003983,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,55-64,Married,2,46,Business,Yes,No,No,Yes,No,No,No,Yes,Youth,No,ATM,1200.0,27700
+CBK-2018-0003053,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",,34.768,Male,55-64,Married,3,14,Student,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,Yes,ATM,140700.0,1264300
+CBK-2020-0003560,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,3,44,Current,No,No,No,Yes,No,No,No,No,Retail,No,ATM,5000.0,161400
+CBK-2014-0005383,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,65+,Single,4,56,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,2440.0,49600
+CBK-2020-0000706,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,25-34,Single,4,99,Savings,No,No,No,Yes,Yes,No,Yes,No,Retail,Yes,ATM,6460.0,231300
+CBK-2014-0005221,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,45-54,Married,0,88,Salary,Yes,No,No,Yes,Yes,No,No,No,Retail,No,ATM,9980.0,460400
+CBK-2025-0002657,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,0,16,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,4220.0,968500
+CBK-2025-0005956,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",,34.7667,Male,25-34,Single,4,73,Savings,Yes,No,No,No,Yes,No,No,No,Retail,No,ATM,5680.0,306000
+CBK-2015-0000081,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Single,0,27,Current,Yes,No,No,Yes,No,No,No,Yes,Retail,Yes,ATM,15400.0,223700
+CBK-2023-0002702,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,45-54,Single,0,41,Business,Yes,No,No,Yes,No,Yes,No,No,SME,Yes,ATM,21900.0,1382400
+CBK-2024-0001783,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,25-34,Married,2,105,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,13040.0,1000200
+CBK-2020-0001568,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,35-44,Single,1,119,Salary,Yes,No,No,Yes,No,No,No,No,Youth,No,ATM,4040.0,244300
+CBK-2015-0001176,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,18-24,Single,0,39,Salary,No,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,4360.0,359700
+CBK-2025-0004031,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,35-44,Married,1,70,Salary,No,No,No,Yes,No,Yes,Yes,No,Youth,Yes,ATM,1400.0,935000
+CBK-2019-0000360,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,45-54,Single,1,64,Salary,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,5160.0,153100
+CBK-2022-0003236,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,18-24,Single,1,21,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,5260.0,67400
+CBK-2026-0001380,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,,Male,55-64,Married,1,62,Business,Yes,No,No,Yes,No,No,Yes,Yes,Youth,Yes,ATM,5720.0,156300
+CBK-2014-0000859,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,35-44,Married,2,117,Business,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,2640.0,98400
+CBK-2020-0002314,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,,Female,55-64,Married,0,17,Current,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,5120.0,30500
+CBK-2019-0005210,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",,36.8172,Female,35-44,Separated/Widowed,1,77,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,21600.0,582400
+CBK-2015-0004874,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,35-44,Married,0,86,Savings,Yes,No,No,Yes,No,No,Yes,Yes,Retail,No,ATM,48880.0,1308500
+CBK-2017-0001010,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Single,0,87,Salary,Yes,No,No,No,Yes,Yes,Yes,No,SME,No,ATM,63720.0,3391400
+CBK-2017-0000850,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,18-24,,1,48,Savings,Yes,No,No,Yes,No,No,No,No,Youth,No,ATM,3180.0,113400
+CBK-2023-0006526,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,18-24,Single,1,21,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,No,ATM,39680.0,1083000
+CBK-2023-0001277,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Male,25-34,Married,1,61,Salary,Yes,No,No,Yes,Yes,Yes,No,No,SME,No,ATM,91960.0,3923300
+CBK-2023-0004321,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,0,116,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,12720.0,1726500
+CBK-2021-0002837,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,25-34,Married,1,28,Salary,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,6700.0,589300
+CBK-2024-0000116,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,Married,2,49,Current,Yes,No,No,Yes,No,No,Yes,Yes,Retail,Yes,ATM,9620.0,179200
+CBK-2026-0004074,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Female,25-34,Married,3,46,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,6460.0,1124200
+CBK-2023-0003394,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Female,25-34,Married,2,22,Student,Yes,No,No,Yes,Yes,No,Yes,No,SME,Yes,ATM,30800.0,410600
+CBK-2017-0000682,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,,Male,35-44,Not stated,0,158,Savings,Yes,No,No,Yes,No,No,Yes,Yes,Youth,Yes,ATM,1800.0,161600
+CBK-2022-0003613,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,45-54,Single,0,63,Savings,Yes,No,No,Yes,Yes,No,No,No,Corporate,Yes,ATM,523320.0,16084600
+CBK-2018-0006703,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,45-54,Single,0,67,Salary,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,5420.0,120800
+CBK-2016-0003374,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,,0,10,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,4120.0,22500
+CBK-2014-0002424,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,65+,Married,1,11,Current,Yes,No,No,No,No,No,Yes,No,Retail,No,ATM,36860.0,257700
+CBK-2025-0000079,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,25-34,Married,0,53,Current,No,No,No,Yes,Yes,No,No,Yes,Retail,Yes,ATM,30400.0,814600
+CBK-2026-0002524,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,35-44,Not stated,0,18,Business,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,5000.0,54800
+CBK-2016-0004395,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,45-54,Single,4,79,Salary,Yes,No,No,Yes,No,No,Yes,Yes,Retail,Yes,ATM,1000.0,50100
+CBK-2016-0001480,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,18-24,Married,2,57,Savings,Yes,No,No,Yes,No,Yes,Yes,No,Sacco,Yes,ATM,194280.0,4682200
+CBK-2023-0000963,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,18-24,Married,1,86,Salary,Yes,No,No,Yes,No,No,Yes,Yes,Youth,Yes,ATM,4400.0,250300
+CBK-2018-0005585,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,65+,Single,2,54,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,6220.0,123900
+CBK-2018-0004844,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,35-44,Single,2,15,Salary,No,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,16960.0,360100
+CBK-2024-0004890,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,45-54,Single,0,32,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,6260.0,635600
+CBK-2022-0004706,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",,37.0693,Male,45-54,Married,1,59,Student,Yes,No,No,Yes,No,Yes,Yes,No,SME,No,ATM,54680.0,2332700
+CBK-2022-0001622,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,35-44,,0,52,Business,Yes,No,No,Yes,No,No,Yes,Yes,Retail,No,ATM,6060.0,191200
+CBK-2019-0005793,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,35-44,Single,4,55,Salary,Yes,No,No,Yes,Yes,No,Yes,No,SME,No,ATM,116440.0,1895400
+CBK-2021-0006960,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,3,33,Savings,Yes,No,No,Yes,No,Yes,No,Yes,Retail,No,ATM,9060.0,1230600
+CBK-2024-0002589,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,45-54,,0,4,Savings,Yes,No,No,Yes,No,Yes,Yes,No,Sacco,No,ATM,113980.0,679300
+CBK-2023-0003278,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Female,55-64,Married,1,33,Salary,Yes,No,No,Yes,Yes,Yes,Yes,No,Retail,Yes,ATM,13980.0,740000
+CBK-2020-0000592,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,55-64,Single,0,79,Business,No,No,No,Yes,No,No,No,No,Retail,Yes,ATM,5040.0,187800
+CBK-2018-0000250,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Male,,Single,0,44,Salary,Yes,No,No,Yes,Yes,Yes,Yes,No,Retail,Yes,ATM,7420.0,956000
+CBK-2020-0002851,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,,Female,55-64,Married,1,84,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,22180.0,2295000
+CBK-2022-0006856,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,25-34,Married,2,31,Salary,Yes,No,No,Yes,Yes,No,No,No,Youth,Yes,ATM,520.0,10900
+CBK-2022-0005996,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Single,3,138,Savings,Yes,No,No,No,No,Yes,No,No,Retail,Yes,ATM,52580.0,3048300
+CBK-2021-0002569,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,45-54,Single,2,19,Current,Yes,No,No,Yes,No,No,Yes,No,SME,No,ATM,99060.0,992900
+CBK-2020-0006102,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",,35.2698,Male,18-24,Married,0,51,Current,Yes,No,No,No,No,No,Yes,No,Retail,No,ATM,4980.0,128100
+CBK-2015-0000304,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,25-34,Married,4,168,Current,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,18040.0,1447400
+CBK-2020-0005515,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,Single,1,27,Current,Yes,No,No,No,Yes,Yes,No,Yes,Retail,Yes,ATM,7200.0,148800
+CBK-2023-0006615,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,18-24,Single,1,85,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,16460.0,692700
+CBK-2024-0003158,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",,,Male,18-24,Married,0,66,Current,Yes,No,No,No,No,No,No,No,Retail,No,ATM,14300.0,295000
+CBK-2023-0002099,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,55-64,Married,2,53,Current,Yes,No,No,No,No,No,Yes,No,Corporate,No,ATM,360160.0,7745500
+CBK-2015-0003474,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,35-44,Single,0,15,Current,Yes,No,No,Yes,Yes,No,Yes,Yes,Retail,No,ATM,8180.0,77800
+CBK-2017-0001184,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,25-34,Married,1,89,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,31820.0,976400
+CBK-2023-0004008,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,,Male,25-34,Married,2,65,Current,Yes,No,No,Yes,Yes,No,Yes,No,Youth,No,ATM,2960.0,67900
+CBK-2020-0005133,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Not stated,0,112,Salary,Yes,No,No,Yes,No,No,Yes,No,Corporate,No,ATM,1091240.0,83656200
+CBK-2014-0004906,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Separated/Widowed,1,35,Business,Yes,No,No,Yes,Yes,No,Yes,No,Retail,Yes,ATM,3800.0,91800
+CBK-2025-0001207,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,55-64,Married,0,2,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,4560.0,4800
+CBK-2026-0005007,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,2,22,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,5860.0,52900
+CBK-2024-0001159,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,35-44,Single,1,84,Savings,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,6520.0,322900
+CBK-2018-0000097,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,65+,Married,0,32,Salary,Yes,No,No,Yes,Yes,No,Yes,Yes,SME,Yes,ATM,74900.0,1758500
+CBK-2025-0001750,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,35-44,Married,2,74,Salary,Yes,No,No,Yes,No,No,Yes,Yes,Retail,No,ATM,1000.0,24200
+CBK-2021-0001859,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,25-34,Single,0,26,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,Retail,No,ATM,16500.0,1257100
+CBK-2017-0002282,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,55-64,Married,1,13,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,8440.0,69400
+CBK-2022-0001535,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",,36.08,Male,35-44,,0,98,Salary,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,5020.0,207400
+CBK-2024-0002050,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,55-64,Married,2,27,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,11940.0,533900
+CBK-2025-0001233,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,18-24,Single,1,74,Business,Yes,No,No,Yes,Yes,No,No,No,Retail,No,ATM,36640.0,1650700
+CBK-2023-0000241,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,25-34,Single,2,77,Salary,Yes,No,No,No,Yes,No,Yes,No,Retail,Yes,ATM,11380.0,337700
+CBK-2017-0006060,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Separated/Widowed,2,40,Salary,No,No,No,No,No,Yes,Yes,No,SME,No,ATM,106040.0,1816800
+CBK-2020-0000988,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Single,0,70,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,5880.0,307800
+CBK-2017-0001546,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,25-34,Single,1,65,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,28500.0,1179600
+CBK-2015-0000818,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Not stated,3,38,Savings,Yes,No,No,Yes,Yes,Yes,No,No,SME,Yes,ATM,133160.0,2516200
+CBK-2015-0000891,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,,Married,1,81,Salary,No,No,No,Yes,Yes,Yes,Yes,No,Retail,No,ATM,5040.0,1226600
+CBK-2019-0002919,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,55-64,Married,2,90,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,21560.0,586900
+CBK-2017-0000823,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,18-24,Married,0,89,Savings,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,16880.0,1073400
+CBK-2019-0003544,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,45-54,Single,2,89,Savings,Yes,No,No,No,Yes,No,Yes,Yes,Retail,No,ATM,27760.0,832400
+CBK-2014-0000793,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,,Married,2,14,Savings,No,No,No,Yes,No,No,Yes,No,Sacco,No,ATM,81060.0,773600
+CBK-2023-0002358,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,,Single,3,34,Savings,No,No,No,No,No,No,Yes,No,Retail,Yes,ATM,19440.0,245300
+CBK-2015-0003962,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,45-54,Single,0,84,Business,Yes,No,No,Yes,No,Yes,No,No,SME,Yes,ATM,96080.0,3515500
+CBK-2017-0000264,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,35-44,Single,2,23,Salary,Yes,No,No,Yes,No,No,No,Yes,Retail,No,ATM,9180.0,97800
+CBK-2014-0000186,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,,Married,4,91,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,9440.0,559800
+CBK-2026-0005466,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,35-44,Single,0,20,Salary,Yes,No,No,Yes,No,Yes,No,Yes,Retail,Yes,ATM,4920.0,1175900
+CBK-2018-0000086,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,25-34,Married,2,30,Current,No,No,No,Yes,Yes,Yes,Yes,No,SME,No,ATM,61380.0,2511100
+CBK-2021-0002350,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,25-34,Single,2,59,Current,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,25400.0,1444600
+CBK-2016-0004057,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,35-44,Separated/Widowed,1,9,Student,Yes,No,No,Yes,No,No,No,No,Corporate,Yes,ATM,190240.0,1266400
+CBK-2014-0004973,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,2,36,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,No,ATM,15760.0,405100
+CBK-2014-0004221,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,0,62,Salary,Yes,No,No,Yes,No,Yes,Yes,No,SME,No,ATM,190240.0,6931300
+CBK-2014-0001864,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,25-34,Married,0,97,Savings,Yes,No,No,Yes,No,No,Yes,Yes,Youth,No,ATM,780.0,41500
+CBK-2024-0005047,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,45-54,Single,3,37,Savings,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,10400.0,912100
+CBK-2024-0000179,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,55-64,Single,2,40,Salary,Yes,No,No,No,No,No,Yes,No,Retail,Yes,ATM,11560.0,330500
+CBK-2016-0001552,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,25-34,Married,0,65,Current,Yes,No,No,No,No,Yes,Yes,No,SME,Yes,ATM,26320.0,1985400
+CBK-2017-0002033,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Female,65+,Not stated,0,28,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,21620.0,308600
+CBK-2015-0000926,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Single,1,70,Current,Yes,No,No,No,No,No,Yes,No,Retail,Yes,ATM,12000.0,515800
+CBK-2019-0004294,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Single,0,49,Savings,No,No,No,Yes,No,Yes,Yes,No,SME,Yes,ATM,55280.0,2340200
+CBK-2018-0003656,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,25-34,Married,2,29,Savings,Yes,No,No,No,No,No,Yes,No,Retail,No,ATM,4200.0,48100
+CBK-2021-0000139,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,0,16,Student,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,2580.0,23300
+CBK-2015-0003533,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,35-44,Single,3,6,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,5740.0,14800
+CBK-2019-0002899,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,,Female,35-44,Single,3,52,Student,Yes,No,No,Yes,No,No,Yes,Yes,Corporate,No,ATM,928000.0,30612800
+CBK-2018-0001882,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,18-24,Married,2,65,Salary,No,No,No,Yes,No,No,Yes,No,Retail,No,ATM,5900.0,274600
+CBK-2026-0006119,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,0,85,Business,Yes,No,No,Yes,No,No,Yes,No,SME,No,ATM,18540.0,945200
+CBK-2023-0006669,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Other/Not stated,25-34,Single,0,84,Salary,Yes,No,No,Yes,Yes,No,No,No,Youth,Yes,ATM,2920.0,103700
+CBK-2016-0001549,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,65+,Single,2,12,Salary,Yes,No,No,Yes,Yes,Yes,No,Yes,Retail,Yes,ATM,4740.0,625100
+CBK-2019-0004207,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Not stated,1,34,Current,Yes,No,No,Yes,Yes,No,Yes,No,Youth,Yes,ATM,1920.0,26900
+CBK-2018-0000051,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,45-54,Married,3,41,Salary,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,6900.0,152700
+CBK-2016-0003423,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,,Female,18-24,Single,2,28,Current,Yes,No,No,Yes,No,No,Yes,Yes,Retail,Yes,ATM,6700.0,117900
+CBK-2019-0002147,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,25-34,Single,3,55,Student,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,Yes,ATM,149440.0,6810900
+CBK-2014-0006898,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,2,31,Savings,Yes,No,No,Yes,Yes,No,No,No,Retail,No,ATM,3780.0,34200
+CBK-2018-0005868,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,35-44,Married,2,36,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,30040.0,545700
+CBK-2021-0000524,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Single,0,17,Current,Yes,No,No,Yes,Yes,No,No,No,SME,No,ATM,32220.0,277000
+CBK-2017-0001866,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,55-64,Married,3,61,Current,Yes,No,No,No,Yes,No,Yes,No,Retail,No,ATM,20060.0,377400
+CBK-2017-0006929,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Single,0,113,Savings,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,860.0,67100
+CBK-2024-0002418,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,35-44,Single,1,49,Salary,No,No,No,No,No,Yes,Yes,No,Corporate,Yes,ATM,558420.0,20842500
+CBK-2018-0006308,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,45-54,Single,0,75,Salary,Yes,No,No,Yes,No,No,No,Yes,Retail,Yes,ATM,3820.0,176900
+CBK-2021-0005208,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Single,2,64,Salary,Yes,No,No,Yes,No,No,No,Yes,SME,No,ATM,21760.0,474200
+CBK-2016-0003810,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,65+,Single,4,158,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,34900.0,3549400
+CBK-2018-0006046,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,35-44,Single,0,31,Business,Yes,No,No,Yes,No,No,No,No,Youth,No,ATM,3760.0,69100
+CBK-2021-0006843,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Single,2,31,Savings,Yes,No,No,No,Yes,No,No,No,Retail,Yes,ATM,4320.0,46100
+CBK-2023-0004503,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Married,1,138,Student,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,21640.0,1513000
+CBK-2018-0004950,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Separated/Widowed,0,16,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,5940.0,59900
+CBK-2024-0002581,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,55-64,Single,0,47,Salary,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,2480.0,51100
+CBK-2014-0000114,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,35-44,Married,1,23,Current,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,30720.0,517600
+CBK-2015-0001571,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,45-54,Married,4,111,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,9920.0,804500
+CBK-2016-0001372,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,45-54,Single,1,60,Savings,No,No,No,Yes,No,No,Yes,Yes,SME,Yes,ATM,34400.0,1326700
+CBK-2018-0004431,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,65+,Married,2,61,Savings,Yes,No,No,Yes,No,No,Yes,Yes,Retail,No,ATM,22300.0,796500
+CBK-2019-0006725,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,25-34,Married,0,12,Savings,Yes,No,No,Yes,No,Yes,Yes,No,Corporate,No,ATM,527820.0,4725600
+CBK-2020-0003781,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,25-34,Married,4,69,Business,Yes,No,No,No,No,No,Yes,No,Retail,No,ATM,25300.0,1070400
+CBK-2021-0001307,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Single,1,20,Salary,Yes,No,No,Yes,Yes,No,Yes,No,Retail,Yes,ATM,4740.0,49200
+CBK-2014-0005814,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,4,70,Business,Yes,No,No,Yes,No,Yes,Yes,No,Corporate,Yes,ATM,417420.0,11652400
+CBK-2014-0005974,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,65+,,1,38,Current,No,No,No,Yes,No,No,No,Yes,Youth,No,ATM,1120.0,28500
+CBK-2024-0000903,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,35-44,Single,1,32,Current,Yes,No,No,Yes,Yes,No,No,No,Retail,Yes,ATM,10160.0,219300
+CBK-2025-0001201,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,45-54,Separated/Widowed,0,14,Current,Yes,No,No,Yes,Yes,No,Yes,No,SME,Yes,ATM,45300.0,340400
+CBK-2014-0005751,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,45-54,Married,0,16,Current,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Retail,Yes,ATM,10520.0,207100
+CBK-2019-0005593,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,35-44,Separated/Widowed,4,85,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,2940.0,111100
+CBK-2016-0006127,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,0,45,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,7500.0,173600
+CBK-2019-0003800,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,18-24,Married,0,19,Salary,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,5940.0,83200
+CBK-2017-0006966,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,,Married,0,39,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,6820.0,147600
+CBK-2024-0006291,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Single,0,3,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,21900.0,27700
+CBK-2024-0003898,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Single,0,47,Business,Yes,No,No,Yes,Yes,No,Yes,No,Retail,No,ATM,18160.0,595500
+CBK-2014-0003260,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,1,67,Current,Yes,No,No,No,No,Yes,Yes,No,Retail,No,ATM,10720.0,1476500
+CBK-2014-0004671,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,25-34,Single,4,85,Business,Yes,No,No,Yes,Yes,No,Yes,No,Retail,Yes,ATM,7580.0,345700
+CBK-2019-0002323,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,2,48,Savings,Yes,No,No,Yes,No,No,No,No,SME,No,ATM,36080.0,978300
+CBK-2025-0001735,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,Married,2,88,Business,No,No,No,Yes,No,No,Yes,No,SME,No,ATM,26080.0,895900
+CBK-2019-0004434,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,45-54,Married,0,25,Business,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,8100.0,375200
+CBK-2020-0004028,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,,Female,25-34,Married,0,35,Salary,Yes,No,No,Yes,Yes,No,Yes,No,Corporate,No,ATM,445940.0,8887300
+CBK-2024-0000762,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,,Male,25-34,Married,0,89,Savings,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,3440.0,1042300
+CBK-2023-0003247,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,65+,Married,0,31,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,7940.0,169100
+CBK-2025-0001387,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",,39.6682,Female,25-34,Single,0,87,Salary,Yes,No,No,Yes,Yes,No,Yes,Yes,Retail,No,ATM,13380.0,718600
+CBK-2022-0002474,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,18-24,Married,1,39,Savings,Yes,No,No,No,No,No,Yes,No,SME,No,ATM,55560.0,1237300
+CBK-2014-0001012,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,35-44,Single,0,50,Savings,Yes,No,No,Yes,No,No,No,Yes,SME,Yes,ATM,62820.0,1184100
+CBK-2018-0006658,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,25-34,Single,0,157,Savings,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,14780.0,1036000
+CBK-2023-0001581,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,25-34,Single,3,29,Savings,No,No,No,No,Yes,No,Yes,No,Corporate,Yes,ATM,485640.0,5994400
+CBK-2020-0003313,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,,Single,2,67,Salary,Yes,No,No,Yes,No,No,Yes,No,SME,No,ATM,61300.0,1678100
+CBK-2015-0003604,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Married,0,58,Student,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,4820.0,196300
+CBK-2020-0005912,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,18-24,Not stated,1,20,Current,Yes,No,No,Yes,Yes,No,Yes,No,Retail,No,ATM,5560.0,55700
+CBK-2014-0001304,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Separated/Widowed,1,16,Savings,Yes,No,No,Yes,No,No,No,Yes,Retail,Yes,ATM,4060.0,30000
+CBK-2021-0000790,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,65+,Single,1,8,Business,Yes,No,No,Yes,No,No,No,No,Sacco,Yes,ATM,130420.0,412800
+CBK-2025-0004656,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,45-54,Not stated,3,18,Savings,Yes,No,No,Yes,Yes,No,Yes,No,Retail,Yes,ATM,3060.0,17300
+CBK-2014-0000490,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Married,0,129,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,4600.0,366600
+CBK-2015-0005913,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,3,61,Current,No,No,No,No,Yes,Yes,Yes,No,Retail,Yes,ATM,7460.0,408900
+CBK-2014-0006627,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,25-34,Married,3,24,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,Corporate,No,ATM,297900.0,3372000
+CBK-2020-0000159,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,,Female,55-64,Married,4,48,Salary,Yes,No,No,Yes,Yes,No,No,Yes,Retail,Yes,ATM,5800.0,205400
+CBK-2020-0004003,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Single,0,116,Salary,Yes,No,No,Yes,No,No,No,No,Youth,No,ATM,940.0,46500
+CBK-2025-0006103,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,35-44,Single,3,98,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,14500.0,975300
+CBK-2016-0003201,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Single,1,45,Current,Yes,No,No,Yes,No,No,Yes,Yes,Sacco,No,ATM,62920.0,1240400
+CBK-2019-0006387,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,18-24,,0,37,Savings,Yes,No,No,Yes,No,No,Yes,Yes,Retail,No,ATM,15980.0,380900
+CBK-2018-0006285,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,65+,Married,1,140,Salary,Yes,No,No,Yes,Yes,No,Yes,No,Retail,Yes,ATM,15480.0,899800
+CBK-2016-0004223,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",,37.0693,Female,55-64,Married,2,52,Current,No,No,No,Yes,No,No,Yes,No,Retail,No,ATM,12040.0,288400
+CBK-2026-0007018,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,25-34,Separated/Widowed,2,63,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,14620.0,563300
+CBK-2022-0002595,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",,36.8172,Female,25-34,Single,1,84,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,12720.0,652300
+CBK-2014-0005122,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,65+,Married,0,24,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,26120.0,273200
+CBK-2019-0001904,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,65+,,2,43,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,10800.0,240300
+CBK-2020-0005514,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,2,71,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,7320.0,189400
+CBK-2019-0006729,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,55-64,Married,4,42,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,13860.0,411400
+CBK-2017-0000871,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Married,0,81,Savings,Yes,No,No,Yes,Yes,No,Yes,Yes,Retail,No,ATM,9060.0,260800
+CBK-2017-0004165,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,45-54,Single,2,13,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,16800.0,170600
+CBK-2022-0000351,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Male,25-34,Separated/Widowed,1,20,Business,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,3120.0,42400
+CBK-2021-0000977,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,18-24,Married,1,15,Student,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,35120.0,1291600
+CBK-2019-0004617,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",,34.7667,Male,18-24,Married,0,80,Savings,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,14500.0,749100
+CBK-2025-0006982,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,35-44,Single,2,58,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,18780.0,724900
+CBK-2024-0006246,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Married,3,35,Salary,No,No,No,Yes,Yes,Yes,Yes,Yes,SME,Yes,ATM,43920.0,804600
+CBK-2017-0004249,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,35-44,Separated/Widowed,2,75,Salary,Yes,No,No,No,No,Yes,Yes,No,Sacco,Yes,ATM,52440.0,2622700
+CBK-2022-0004939,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",,39.6682,Male,45-54,Married,0,73,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,83380.0,4165800
+CBK-2015-0004563,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,55-64,Married,0,54,Current,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,8460.0,1291200
+CBK-2017-0004859,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,65+,Not stated,0,68,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,12140.0,294800
+CBK-2016-0000320,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Not stated,2,35,Business,Yes,No,No,Yes,No,Yes,Yes,No,Sacco,No,ATM,611960.0,14750800
+CBK-2024-0001006,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,25-34,Married,0,63,Student,Yes,No,No,Yes,Yes,Yes,No,No,Retail,Yes,ATM,4760.0,293500
+CBK-2018-0004524,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",,36.8172,Male,45-54,Married,1,101,Savings,Yes,No,No,Yes,No,Yes,No,No,Sacco,Yes,ATM,128740.0,6153300
+CBK-2015-0004190,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,,Male,25-34,Separated/Widowed,2,69,Salary,Yes,No,No,Yes,No,No,No,No,Youth,No,ATM,4600.0,162000
+CBK-2023-0005630,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,,Female,25-34,Married,4,35,Salary,Yes,No,No,No,No,No,No,No,Retail,Yes,ATM,1800.0,19500
+CBK-2019-0003662,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Separated/Widowed,2,33,Student,Yes,No,No,No,Yes,No,Yes,No,Sacco,Yes,ATM,146540.0,2888800
+CBK-2015-0001237,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,0,29,Business,Yes,No,No,Yes,No,No,No,No,SME,No,ATM,121460.0,1386500
+CBK-2016-0005790,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Female,45-54,Not stated,2,19,Savings,No,No,No,Yes,No,No,No,No,Retail,Yes,ATM,3600.0,43500
+CBK-2020-0001830,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,18-24,Not stated,1,67,Business,Yes,No,No,Yes,No,No,Yes,Yes,Retail,No,ATM,3260.0,70800
+CBK-2014-0001673,1,Kenya,Kisii,Kisii,KIS009,"-0.6817, 34.7667",-0.6817,34.7667,Female,65+,Single,0,106,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,1540.0,106500
+CBK-2020-0006625,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,65+,Separated/Widowed,2,80,Savings,No,No,No,Yes,No,No,No,No,Retail,Yes,ATM,13400.0,452900
+CBK-2015-0004813,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Male,35-44,,4,12,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,13360.0,63100
+CBK-2021-0005392,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",,36.8172,Male,35-44,Married,1,42,Salary,Yes,No,No,No,Yes,No,No,No,Retail,Yes,ATM,9960.0,297400
+CBK-2019-0006944,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,35-44,Single,1,18,Savings,Yes,No,No,Yes,No,Yes,Yes,No,SME,Yes,ATM,65460.0,1163200
+CBK-2022-0005223,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,45-54,Married,0,34,Savings,Yes,No,No,No,No,No,Yes,No,Retail,No,ATM,35440.0,732500
+CBK-2015-0005861,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Single,1,29,Student,No,No,No,Yes,No,No,Yes,No,Retail,No,ATM,11680.0,121400
+CBK-2021-0002085,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Married,0,92,Savings,Yes,No,No,No,No,Yes,No,No,Retail,Yes,ATM,15820.0,1737100
+CBK-2015-0001260,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,35-44,Separated/Widowed,0,92,Salary,Yes,No,No,Yes,No,Yes,No,No,Retail,No,ATM,26040.0,1619700
+CBK-2018-0005611,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,55-64,Single,2,39,Salary,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,16280.0,614400
+CBK-2016-0001081,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Female,18-24,Married,1,75,Savings,No,No,No,Yes,No,Yes,Yes,No,Retail,Yes,ATM,8080.0,1084400
+CBK-2025-0006666,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,25-34,Single,3,170,Salary,Yes,No,No,Yes,No,No,Yes,Yes,SME,Yes,ATM,40720.0,3312400
+CBK-2024-0001228,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,35-44,Single,1,31,Salary,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,38720.0,745300
+CBK-2025-0003389,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,1,19,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,18660.0,152800
+CBK-2022-0001572,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,65+,Separated/Widowed,2,18,Salary,Yes,No,No,Yes,Yes,No,Yes,No,SME,Yes,ATM,69580.0,847500
+CBK-2019-0001582,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,45-54,Separated/Widowed,4,86,Current,Yes,No,No,No,No,Yes,No,No,Retail,No,ATM,17840.0,1223700
+CBK-2019-0000829,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Other/Not stated,25-34,Single,2,65,Current,Yes,No,No,Yes,No,Yes,No,Yes,Retail,No,ATM,25060.0,1299100
+CBK-2025-0004061,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,35-44,Single,0,142,Salary,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,No,ATM,63280.0,7334200
+CBK-2017-0003636,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Single,2,56,Salary,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,23340.0,513000
+CBK-2021-0000652,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,3,98,Savings,Yes,No,No,Yes,No,No,No,No,Youth,Yes,ATM,9040.0,438400
+CBK-2022-0002803,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Single,4,19,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,14660.0,202500
+CBK-2026-0005894,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,2,41,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,31400.0,858400
+CBK-2019-0006135,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Married,0,14,Salary,No,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,5920.0,809300
+CBK-2014-0006203,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,25-34,Single,0,77,Savings,Yes,No,No,No,No,Yes,Yes,No,Retail,No,ATM,39380.0,1713900
+CBK-2019-0000456,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,55-64,Separated/Widowed,0,8,Salary,Yes,No,No,Yes,Yes,No,Yes,No,SME,No,ATM,106420.0,435200
+CBK-2023-0003388,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Single,1,52,Business,Yes,No,No,Yes,Yes,No,Yes,No,Youth,Yes,ATM,9380.0,219400
+CBK-2026-0003178,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,,2,27,Current,Yes,No,No,Yes,Yes,No,Yes,No,Retail,No,ATM,5900.0,78100
+CBK-2014-0003882,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,35-44,Single,0,19,Salary,Yes,No,No,No,No,Yes,Yes,No,Retail,No,ATM,3700.0,1176900
+CBK-2026-0005025,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,25-34,Separated/Widowed,1,75,Current,No,No,No,Yes,Yes,No,No,No,Retail,Yes,ATM,10140.0,528400
+CBK-2022-0005695,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,18-24,Separated/Widowed,3,14,Salary,Yes,No,No,Yes,Yes,Yes,No,No,Corporate,Yes,ATM,180540.0,2189100
+CBK-2014-0003338,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,35-44,Single,0,41,Salary,Yes,No,No,Yes,No,Yes,No,No,Youth,No,ATM,3100.0,539900
+CBK-2022-0001933,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,65+,Not stated,0,132,Salary,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,Yes,ATM,93820.0,4147800
+CBK-2015-0005811,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Married,2,47,Salary,Yes,No,No,No,No,Yes,Yes,No,Retail,Yes,ATM,15460.0,1501900
+CBK-2016-0004850,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Separated/Widowed,2,52,Savings,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,2560.0,79600
+CBK-2014-0002530,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,55-64,,2,19,Savings,Yes,No,No,No,No,Yes,No,No,Youth,No,ATM,2240.0,1023800
+CBK-2019-0001324,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,35-44,Married,3,68,Savings,Yes,No,No,Yes,No,Yes,No,Yes,Retail,Yes,ATM,2500.0,423800
+CBK-2024-0002792,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,65+,Separated/Widowed,4,25,Savings,Yes,No,No,Yes,No,No,Yes,Yes,Retail,Yes,ATM,1780.0,13000
+CBK-2024-0004238,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,65+,Single,0,72,Salary,Yes,No,No,No,No,No,Yes,No,Retail,No,ATM,18240.0,965500
+CBK-2026-0001346,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Married,1,18,Salary,Yes,No,No,Yes,Yes,Yes,No,No,Retail,Yes,ATM,2020.0,636900
+CBK-2016-0001616,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,25-34,Single,1,45,Savings,Yes,No,No,Yes,No,No,No,Yes,Retail,Yes,ATM,5460.0,153100
+CBK-2022-0004710,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,,,0,84,Business,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,11280.0,514300
+CBK-2019-0006591,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,45-54,Married,0,32,Salary,Yes,No,No,Yes,Yes,No,No,Yes,Retail,No,ATM,6520.0,83600
+CBK-2022-0001037,1,Kenya,Kakamega,Kakamega,KAK011,"0.2827, 34.7519",0.2827,34.7519,Male,35-44,Married,2,27,Student,Yes,No,No,Yes,No,No,Yes,No,Youth,No,ATM,220.0,3200
+CBK-2015-0001899,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Single,1,8,Salary,Yes,No,No,Yes,Yes,No,Yes,No,SME,No,ATM,93280.0,252600
+CBK-2016-0000142,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,25-34,Married,2,8,Salary,Yes,No,No,Yes,No,No,No,Yes,Youth,No,ATM,1140.0,3100
+CBK-2016-0005265,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Married,1,32,Savings,Yes,No,No,Yes,No,Yes,Yes,Yes,Corporate,Yes,ATM,152480.0,2805500
+CBK-2014-0003115,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,25-34,Single,2,28,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,5400.0,89300
+CBK-2014-0006607,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,65+,Single,2,62,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,9080.0,274800
+CBK-2021-0001104,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,25-34,Single,4,82,Current,Yes,No,No,No,No,Yes,Yes,No,Retail,No,ATM,4040.0,1048400
+CBK-2022-0006552,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,55-64,Single,3,18,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,Yes,ATM,40240.0,573800
+CBK-2023-0006812,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,35-44,Single,0,10,Savings,Yes,No,No,Yes,Yes,Yes,No,Yes,SME,No,ATM,30120.0,596100
+CBK-2018-0005079,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,35-44,Married,0,39,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,5760.0,154500
+CBK-2026-0001558,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",,37.2634,Female,45-54,Single,0,51,Salary,No,No,No,Yes,No,No,No,No,Retail,No,ATM,8020.0,269200
+CBK-2022-0002321,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,2,44,Current,Yes,No,No,Yes,No,Yes,Yes,No,SME,Yes,ATM,83420.0,2992700
+CBK-2024-0003650,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Male,25-34,Married,2,49,Salary,Yes,No,No,No,No,No,Yes,Yes,SME,No,ATM,16040.0,555400
+CBK-2026-0003404,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,65+,Single,0,63,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,22120.0,752600
+CBK-2020-0002628,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Married,0,80,Current,Yes,No,No,Yes,No,No,No,No,Youth,Yes,ATM,4420.0,212700
+CBK-2025-0003534,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,35-44,Married,0,51,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,4180.0,70400
+CBK-2022-0002573,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Female,25-34,Married,0,60,Salary,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,11840.0,361100
+CBK-2020-0004650,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,25-34,,0,24,Savings,Yes,No,No,Yes,Yes,No,No,Yes,SME,Yes,ATM,45280.0,432400
+CBK-2014-0006972,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Married,0,76,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,17800.0,808400
+CBK-2014-0000826,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,65+,Married,2,106,Salary,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,3540.0,159900
+CBK-2019-0004699,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,18-24,Not stated,2,27,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,15360.0,202100
+CBK-2025-0002875,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,25-34,Single,2,95,Current,Yes,No,No,Yes,No,No,No,No,Sacco,Yes,ATM,186900.0,5378100
+CBK-2022-0002409,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,35-44,Married,4,31,Business,No,No,No,Yes,No,No,No,Yes,Retail,No,ATM,5520.0,103900
+CBK-2022-0004853,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,35-44,Married,2,24,Student,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,6940.0,85900
+CBK-2026-0001551,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Separated/Widowed,4,15,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,17960.0,169300
+CBK-2025-0004561,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,65+,Single,3,86,Current,Yes,No,No,Yes,Yes,No,No,No,Retail,No,ATM,7580.0,239400
+CBK-2025-0006137,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Married,0,103,Business,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,7440.0,445200
+CBK-2020-0003319,1,Kenya,Nyeri,Nyeri,NYE010,"-0.4197, 36.9476",-0.4197,36.9476,Female,55-64,Single,0,52,Savings,Yes,No,No,Yes,No,No,No,No,Youth,No,ATM,660.0,19000
+CBK-2025-0006531,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,35-44,Separated/Widowed,1,78,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,2460.0,105800
+CBK-2021-0004248,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Female,25-34,Married,0,48,Salary,Yes,No,No,Yes,No,No,Yes,Yes,Youth,No,ATM,7000.0,150100
+CBK-2016-0003183,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,35-44,,1,45,Student,Yes,No,No,No,No,Yes,Yes,No,Retail,Yes,ATM,6720.0,1054200
+CBK-2024-0006819,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,55-64,Single,4,80,Salary,Yes,No,No,No,No,No,Yes,No,Retail,No,ATM,17100.0,871300
+CBK-2023-0006506,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,39.6682,Female,25-34,Married,2,62,Current,Yes,No,No,No,No,No,Yes,No,Sacco,Yes,ATM,119040.0,5493100
+CBK-2024-0005776,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Male,18-24,Single,2,63,Salary,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,1280.0,31100
+CBK-2022-0005071,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,45-54,Single,2,65,Business,Yes,No,No,Yes,No,No,No,Yes,Retail,Yes,ATM,6420.0,306700
+CBK-2026-0001724,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",,37.2634,Male,55-64,Married,1,56,Salary,No,No,No,No,No,No,Yes,No,Retail,Yes,ATM,30940.0,1028200
+CBK-2021-0006701,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,25-34,Married,1,54,Current,Yes,No,No,No,Yes,No,No,No,Corporate,No,ATM,1689720.0,28933500
+CBK-2014-0002081,1,Kenya,Nakuru,Nakuru,NAK004,"-0.3031, 36.08",-0.3031,36.08,Male,35-44,Married,1,36,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,6920.0,104300
+CBK-2025-0002755,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Female,35-44,Married,1,20,Savings,Yes,No,No,No,No,No,No,Yes,Retail,No,ATM,10140.0,141100
+CBK-2020-0002343,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,,Female,65+,Married,4,16,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,9600.0,51700
+CBK-2018-0005986,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Married,0,123,Savings,Yes,No,No,Yes,No,Yes,No,No,Retail,Yes,ATM,11340.0,1637400
+CBK-2025-0000840,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Separated/Widowed,1,135,Current,Yes,No,No,Yes,No,Yes,Yes,Yes,Retail,No,ATM,16060.0,1837000
+CBK-2018-0005390,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Female,55-64,Married,1,39,Student,Yes,No,No,Yes,No,Yes,Yes,No,Retail,No,ATM,9500.0,318300
+CBK-2014-0004758,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,65+,Married,0,25,Current,Yes,No,No,Yes,No,No,Yes,No,Retail,No,ATM,8960.0,123900
+CBK-2021-0002678,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,45-54,Single,0,37,Savings,Yes,No,No,Yes,No,No,Yes,No,Retail,Yes,ATM,9880.0,234400
+CBK-2015-0005337,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,25-34,Single,1,31,Savings,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,14700.0,141700
+CBK-2014-0000545,1,Kenya,Kisumu,Kisumu,KIS006,"-0.0917, 34.768",-0.0917,34.768,Female,35-44,Married,2,28,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,Corporate,Yes,ATM,127740.0,2875900
+CBK-2016-0000282,1,Kenya,Machakos,Machakos,MAC007,"-1.5177, 37.2634",-1.5177,37.2634,Male,18-24,Married,0,38,Current,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,Yes,ATM,68360.0,1547300
+CBK-2022-0004912,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Married,2,18,Business,Yes,No,No,No,No,No,Yes,No,Youth,Yes,ATM,740.0,7700
+CBK-2020-0004875,1,Kenya,Uasin Gishu,Eldoret,UAS005,"0.5143, 35.2698",0.5143,35.2698,Male,55-64,Married,2,47,Salary,Yes,No,No,Yes,Yes,No,No,No,Retail,Yes,ATM,19700.0,608300
+CBK-2022-0002289,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,65+,Married,0,11,Savings,Yes,No,No,No,No,No,Yes,No,Sacco,No,ATM,37760.0,125200
+CBK-2014-0004990,1,Kenya,Mombasa,Mombasa,MOM002,"-4.0435, 39.6682",-4.0435,,Female,,Married,3,110,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,SME,Yes,ATM,81300.0,7275400
+CBK-2020-0006001,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,1,29,Savings,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,1720.0,18900
+CBK-2016-0006810,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,25-34,Not stated,0,48,Savings,Yes,No,No,No,Yes,No,Yes,Yes,Retail,Yes,ATM,27540.0,985400
+CBK-2016-0002377,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,18-24,Single,2,3,Savings,Yes,No,No,Yes,No,No,No,Yes,Retail,Yes,ATM,4340.0,5600
+CBK-2015-0005444,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,55-64,Single,0,19,Savings,Yes,No,No,Yes,Yes,Yes,Yes,No,Corporate,Yes,ATM,507960.0,7669000
+CBK-2024-0002179,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,2,53,Student,Yes,No,No,Yes,No,No,No,No,Youth,No,ATM,2040.0,80500
+CBK-2022-0002604,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,18-24,Single,3,87,Current,Yes,No,No,Yes,No,Yes,Yes,Yes,Retail,No,ATM,3460.0,1248800
+CBK-2017-0000999,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,45-54,Single,0,94,Salary,Yes,No,No,Yes,No,No,No,No,Retail,No,ATM,4800.0,181400
+CBK-2014-0006488,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Male,45-54,Married,3,73,Business,No,No,No,Yes,Yes,No,No,No,Retail,Yes,ATM,7600.0,179800
+CBK-2025-0005779,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Male,55-64,Single,1,19,Business,Yes,No,No,Yes,Yes,No,Yes,No,SME,Yes,ATM,82260.0,621200
+CBK-2023-0001796,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Married,2,8,Savings,Yes,No,No,Yes,No,No,No,No,Retail,Yes,ATM,3080.0,14700
+CBK-2015-0006475,1,Kenya,Nairobi,Nairobi,NAI001,"-1.2864, 36.8172",-1.2864,36.8172,Female,35-44,Single,2,110,Current,Yes,No,No,Yes,Yes,No,Yes,No,Retail,Yes,ATM,5000.0,274800
+CBK-2022-0004868,1,Kenya,Meru,Meru,MER008,"0.0463, 37.6559",0.0463,37.6559,Female,55-64,Married,0,11,Current,Yes,No,No,No,No,Yes,No,No,Retail,Yes,ATM,17500.0,319600
+CBK-2014-0005686,1,Kenya,Embu,Embu,EMB012,"-0.5399, 37.4574",-0.5399,37.4574,Male,55-64,Married,1,16,Current,Yes,No,No,Yes,No,Yes,Yes,Yes,Sacco,Yes,ATM,119120.0,2025700
+CBK-2018-0006538,1,Kenya,Kiambu,Thika,KIA003,"-1.0332, 37.0693",-1.0332,37.0693,Male,25-34,Separated/Widowed,3,46,Business,Yes,No,No,Yes,No,No,Yes,No,Youth,Yes,ATM,4500.0,142200

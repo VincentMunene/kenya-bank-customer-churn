@@ -1,0 +1,17 @@
+feature,method,distance,reference_missing_rate,current_missing_rate,missing_rate_change,unseen_category_rate,distribution_alert,quality_alert
+debit_card,Total variation,0.02515512957046504,0.0,0.0,0.0,0.0,False,False
+mobile_banking,Total variation,0.8439829605963791,0.0,0.0,0.0,0.0,True,False
+internet_banking,Total variation,0.4609513667021654,0.0,0.0,0.0,0.0,True,False
+sms_alerts,Total variation,0.015256656017039405,0.0,0.0,0.0,0.0,False,False
+standing_orders,Total variation,0.03676961306354276,0.0,0.0,0.0,0.0,False,False
+loan_product,Total variation,0.004411075612353599,0.0,0.0,0.0,0.0,False,False
+savings_product,Total variation,0.011281505147319848,0.0,0.0,0.0,0.0,False,False
+insurance_product,Total variation,0.0034682286119985806,0.0,0.0,0.0,0.0,False,False
+e_statements,Total variation,0.002082357117500905,0.0,0.0,0.0,0.0,False,False
+tenure_months,KS statistic,0.03131629392971246,0.0,0.0,0.0,0.0,False,False
+monthly_transaction_value_kes,KS statistic,0.4854156904508342,0.0,0.0,0.0,0.0,True,False
+total_relationship_value_kes,KS statistic,0.014494142705005325,0.0,0.0,0.0,0.0,False,False
+primary_account,Total variation,0.01505857294994677,0.0,0.0,0.0,0.0,False,False
+customer_segment,Total variation,0.016486332978345765,0.0,0.0,0.0,0.0,False,False
+preferred_transaction_channel,Total variation,0.8109691160809372,0.0,0.0,0.0,0.0,True,False
+county,Total variation,0.03422435214767483,0.0,0.0,0.0,0.0,False,False

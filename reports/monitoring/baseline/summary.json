@@ -1,0 +1,38 @@
+{
+  "status": "no_alert_detected",
+  "model": "Random Forest",
+  "reference_customers": 5634,
+  "current_customers": 500,
+  "minimum_batch_rows": 200,
+  "distribution_threshold": 0.1,
+  "missing_change_threshold": 0.05,
+  "features_with_distribution_alerts": [],
+  "features_with_quality_alerts": [],
+  "reference_mean_score": 0.35388592206458935,
+  "current_mean_score": 0.3533695727463861,
+  "score_ks_distance": 0.029078452254171105,
+  "score_distribution_alert": false,
+  "reference_risk_band_proportions": {
+    "Low": 0.6822861199858005,
+    "Medium": 0.20056798012069577,
+    "High": 0.11714589989350373
+  },
+  "current_risk_band_proportions": {
+    "Low": 0.668,
+    "Medium": 0.234,
+    "High": 0.098
+  },
+  "reference_data_sha256": "0997817659bb55a5a6a1b56078ee1a860891e7406b224e6f155ffd058aaf068a",
+  "current_data_sha256": "651cdf29c77117ee5eb1c9f70990d77a9fdab2381b36e43d48982f9bc93f1611",
+  "model_sha256": "6504f500c3cdac1ac7b77ae03fd53adf4a4f25ffc9ca1ae9bdea960f3efe1740",
+  "notes": [
+    "Thresholds are illustrative and require operational validation.",
+    "Distances are descriptive; no significance claim is made.",
+    "Numeric distances exclude missing values; missingness is reported separately.",
+    "Reference scores are fitted-model scores on training customers, not OOF scores.",
+    "Training-reference score drift can reflect differences in generalization.",
+    "No churn labels were used to calculate monitoring metrics.",
+    "Input or prediction drift does not establish concept drift or performance decline.",
+    "No automatic retraining or deployment is performed."
+  ]
+}

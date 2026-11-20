@@ -44,6 +44,53 @@ jobs:
       - name: Run API integration tests
         run: python -m pytest tests/test_api.py -q
 
+      - name: Verify drift monitoring demonstration
+        run: |
+          python -m src.create_monitoring_demo
+
+          python -m src.monitor \
+            --input examples/monitoring/baseline.csv \
+            --output-dir reports/monitoring/baseline
+
+          python -m src.monitor \
+            --input examples/monitoring/shifted.csv \
+            --output-dir reports/monitoring/shifted
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path("reports/monitoring")
+
+          baseline = json.loads(
+              (root / "baseline/summary.json").read_text(encoding="utf-8")
+          )
+          shifted = json.loads(
+              (root / "shifted/summary.json").read_text(encoding="utf-8")
+          )
+
+          expected_features = {
+              "mobile_banking",
+              "internet_banking",
+              "monthly_transaction_value_kes",
+              "preferred_transaction_channel",
+          }
+
+          assert baseline["current_customers"] == 500
+          assert shifted["current_customers"] == 500
+          assert baseline["status"] == "no_alert_detected", baseline
+          assert shifted["status"] == "review_required", shifted
+
+          detected = set(shifted["features_with_distribution_alerts"])
+          assert expected_features.issubset(detected), detected
+          assert shifted["score_distribution_alert"], shifted
+
+          assert not baseline["features_with_quality_alerts"], baseline
+          assert not shifted["features_with_quality_alerts"], shifted
+
+          print("Monitoring demonstration checks passed.")
+          PY
+
       - name: Validate Docker Compose configuration
         run: docker compose config --quiet
 

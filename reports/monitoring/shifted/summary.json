@@ -1,0 +1,43 @@
+{
+  "status": "review_required",
+  "model": "Random Forest",
+  "reference_customers": 5634,
+  "current_customers": 500,
+  "minimum_batch_rows": 200,
+  "distribution_threshold": 0.1,
+  "missing_change_threshold": 0.05,
+  "features_with_distribution_alerts": [
+    "mobile_banking",
+    "internet_banking",
+    "monthly_transaction_value_kes",
+    "preferred_transaction_channel"
+  ],
+  "features_with_quality_alerts": [],
+  "reference_mean_score": 0.35388592206458935,
+  "current_mean_score": 0.40590778103351793,
+  "score_ks_distance": 0.3528746893858715,
+  "score_distribution_alert": true,
+  "reference_risk_band_proportions": {
+    "Low": 0.6822861199858005,
+    "Medium": 0.20056798012069577,
+    "High": 0.11714589989350373
+  },
+  "current_risk_band_proportions": {
+    "Low": 0.478,
+    "Medium": 0.384,
+    "High": 0.138
+  },
+  "reference_data_sha256": "0997817659bb55a5a6a1b56078ee1a860891e7406b224e6f155ffd058aaf068a",
+  "current_data_sha256": "221ea95e40cbf907832f81fb3d0f0d0fb56e6d761689572d9fffb836774beb17",
+  "model_sha256": "6504f500c3cdac1ac7b77ae03fd53adf4a4f25ffc9ca1ae9bdea960f3efe1740",
+  "notes": [
+    "Thresholds are illustrative and require operational validation.",
+    "Distances are descriptive; no significance claim is made.",
+    "Numeric distances exclude missing values; missingness is reported separately.",
+    "Reference scores are fitted-model scores on training customers, not OOF scores.",
+    "Training-reference score drift can reflect differences in generalization.",
+    "No churn labels were used to calculate monitoring metrics.",
+    "Input or prediction drift does not establish concept drift or performance decline.",
+    "No automatic retraining or deployment is performed."
+  ]
+}

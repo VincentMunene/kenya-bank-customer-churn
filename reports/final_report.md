@@ -301,6 +301,40 @@ Development dependency versions are recorded, but the Docker base-image
 tag and transitive runtime dependencies are not fully immutable.
 Bit-for-bit reproducibility across platforms is not claimed.
 
+## CI/CD and model monitoring
+
+GitHub Actions runs API integration tests, builds the Docker image and
+verifies container health and prediction consistency on pushes and pull
+requests to main.
+
+Version tags trigger publication of the tested image to GitHub Container
+Registry. Version v1.0.0 was published, downloaded and run locally.
+Its prediction matched local batch scoring. This provides automated
+image delivery with manual deployment; it does not deploy a public API.
+
+Batch monitoring compares incoming inputs with the training reference.
+Numeric changes use the Kolmogorov–Smirnov statistic, while categorical
+changes use total variation distance. The script also reports missingness,
+unseen categories, prediction-score changes and risk-band proportions.
+
+The illustrative distribution threshold is 0.10. Missing-rate changes
+of at least 0.05 trigger a quality warning. Distribution alerts require
+at least 200 incoming records.
+
+A demonstration used 500 sampled training customers and a modified copy
+with reduced monthly transaction values and altered banking-service
+usage. The baseline produced no alerts and a score KS distance of 0.0291.
+The modified batch triggered alerts for all four deliberately changed
+inputs and a score KS distance of 0.3529.
+
+These batches demonstrate monitoring behavior, not independent validation.
+The thresholds require operational validation. Input and prediction drift
+do not prove concept drift or performance decline. Actual churn outcomes
+would be needed to monitor precision, recall and other performance metrics.
+
+Monitoring currently runs as a command-line batch process. It does not
+collect live API traffic or automatically retrain or deploy models.
+
 ## 10. Limitations and next steps
 
 The main limitations are:

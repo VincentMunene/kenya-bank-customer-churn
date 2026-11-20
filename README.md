@@ -406,6 +406,49 @@ fresh Linux runner. They do not retrain the model or deploy a public API.
 
 Workflow: `.github/workflows/ci.yml`.
 
+## Batch drift monitoring
+
+The monitoring script compares incoming customer inputs with the recorded
+training reference. It reports numeric and categorical distribution
+changes, missing-value changes, unseen categories and prediction-score
+changes.
+
+Run monitoring on a new batch:
+
+```powershell
+python -m src.monitor --input examples/customers.csv --output-dir reports/monitoring/current
+```
+
+Distribution alerts require at least 200 customers. Smaller batches
+receive an insufficient-batch-size status; data-quality findings are
+still reported.
+
+Reproduce the simulated demonstration:
+
+```powershell
+python -m src.create_monitoring_demo
+python -m src.monitor --input examples/monitoring/baseline.csv --output-dir reports/monitoring/baseline
+python -m src.monitor --input examples/monitoring/shifted.csv --output-dir reports/monitoring/shifted
+```
+
+The demonstration reuses 500 training customers and does not provide
+independent validation. The shifted version deliberately reduces monthly
+transaction values and changes mobile banking, internet banking and
+preferred transaction channel.
+
+| Batch | Status | Input alerts | Score KS distance |
+|---|---|---:|---:|
+| Baseline | no_alert_detected | 0 | 0.0291 |
+| Shifted | review_required | 4 | 0.3529 |
+
+Thresholds are illustrative and require validation before operational
+use. Alerts prompt investigation; they do not trigger automatic
+retraining. Input or prediction drift does not establish concept drift
+or performance decline. Actual churn outcomes are needed to measure
+ongoing predictive performance.
+
+
+
 ## Limitations
 
 - Synthetic data does not establish performance on real

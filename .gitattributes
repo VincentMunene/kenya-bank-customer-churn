@@ -1,0 +1,2 @@
+# Preserve the raw CSV line endings used for the training checksum.
+data/raw/CBCustomer_Churn.csv text eol=crlf

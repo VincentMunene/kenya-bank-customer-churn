@@ -135,6 +135,16 @@ hyperparameter search. More complex algorithms were not retained in the
 final workflow to keep the implementation understandable and defensible
 within the project scope.
 
+A further training-only experiment compared unweighted Random Forest,
+balanced class weights and SMOTENC using identical validation folds
+and Random Forest parameters. SMOTENC was applied only inside training
+folds, with five neighbours and a minority-to-majority ratio of 1:1.
+It achieved mean F1 of 0.2138, compared with 0.2519 for balanced weights.
+Although recall increased from 34.43% to 37.72%, precision decreased
+from 19.87% to 14.93%. Balanced class weights were therefore retained.
+This experiment evaluated one SMOTENC configuration and does not
+establish that class weighting is universally superior.
+
 ## 5. Evaluation metrics
 
 The evaluation uses five metrics:
